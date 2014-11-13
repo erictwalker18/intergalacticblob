@@ -1,5 +1,6 @@
 package walkere.carleton.edu;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -42,4 +43,28 @@ public class GameModel {
     public void step() {
     }
 
+    /**
+     * Adds a spaceJunk object at the specified location
+     * @param x the x location for the spaceJunk
+     * @param y the y location for the spaceJunk
+     */
+    public void addSpaceJunk(double x, double y) {
+
+    }
+
+    /**
+     * Gets the score of the game
+     * @return the current score of the game
+     */
+    public int getScore() {
+        return this.score;
+    }
+
+    /**
+     * Gets the spaceObjects stored in the model (for testing purposes)
+     * @return the spaceObjects arraylist associated with this instance of GameModel
+     */
+    public ArrayList<SpaceObject> getSpaceObjects() {
+        return this.spaceObjects;
+    }
 }

@@ -100,6 +100,10 @@ public class SpaceObjectTest {
 
     @Test
     public void testStep() throws Exception {
+        nonMovingObject.step();
+        strangeObjecct.step();
+        assertEquals(new javafx.geometry.Point2D(0,0), nonMovingObject.getPosition());
+        assertEquals(new javafx.geometry.Point2D(297,985), strangeObjecct.getPosition());
 
     }
 }
