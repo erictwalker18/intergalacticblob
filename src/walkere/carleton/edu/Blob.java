@@ -20,6 +20,14 @@ public class Blob extends SpaceObject {
     }
 
     /**
+     * Constructor for making a more interesting blob with a different image
+     * @param pictureFileName the name of the file that holds the picture for the blob.
+     */
+    public Blob(String pictureFileName) {
+
+    }
+
+    /**
      *
      * @param spaceJunk the SpaceJunk to check an intersection with
      * @return true if the mighty Blob has been crippled by a spaceJunk, false if
