@@ -7,6 +7,10 @@ package walkere.carleton.edu;
  * Created on 11/12/2014.
  */
 
+/**
+ * SpaceJunk.java
+ * Class for all the wall objects that are created.
+ */
 public class SpaceJunk extends SpaceObject {
 
     /**

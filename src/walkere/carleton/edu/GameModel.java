@@ -1,8 +1,7 @@
 package walkere.carleton.edu;
 
-import javafx.scene.control.Label;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * BlobStudios
@@ -11,20 +10,26 @@ import java.util.ArrayList;
  * Created on 11/12/2014.
  */
 
-public class Model {
+/**
+ * GameModel.java
+ *
+ * Model class that holds all the information that the scene is built from.
+ */
+public class GameModel {
     //Instance Variables
     private ArrayList<SpaceObject> spaceObjects;
     private int position;
     private int score;
-    private Label scoreField;
+    private HashMap<Integer, String> highscores;
 
     /**
      * Default constructor. Instantiates the list spaceObjects which holds the
      * various walls and actors in it. Also instantiates various instance variables
      * that are used for keeping track of the score.
      */
-    public Model() {
+    public GameModel() {
         //These aren't the implementations you're looking for...
+        //... Move along.
         //spaceObjects = new ArrayList<SpaceObject>();
         //position = 0;
         //score = 0;
@@ -32,9 +37,10 @@ public class Model {
     }
 
     /**
-     * Updates all the SpaceObjects, the score, and the scoreField.
+     * Updates all the SpaceObjects and the score.
      */
-    public void update() {
+    public void step() {
 
     }
+
 }

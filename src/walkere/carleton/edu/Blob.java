@@ -7,6 +7,10 @@ package walkere.carleton.edu;
  * Created on 11/12/2014.
  */
 
+/**
+ * Blob.java
+ * Class for the avatar of the user in the game.
+ */
 public class Blob extends SpaceObject {
 
     /**

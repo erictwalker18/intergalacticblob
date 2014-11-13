@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
  */
 
 /**
+ * SpaceObject.java
  * This class is the abstract class that all space objects will extend.
  * It contains methods that are necessary for building the model of
  * The Intergalactic Adventure of Blob.
