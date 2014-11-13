@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class GameModel {
     //Instance Variables
     private ArrayList<SpaceObject> spaceObjects;
-    private int position;
+    private int avatarPosition;
     private int score;
     private HashMap<Integer, String> highscores;
 
@@ -40,7 +40,6 @@ public class GameModel {
      * Updates all the SpaceObjects and the score.
      */
     public void step() {
-
     }
 
 }
