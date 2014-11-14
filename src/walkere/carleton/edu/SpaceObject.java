@@ -27,7 +27,9 @@ public abstract class SpaceObject extends Group {
     private ImageView imageView;
     private Image image;
 
-    public SpaceObject() { }
+    public SpaceObject() {
+        imageView = new ImageView();
+    }
 
     /**
      * Gets the name of a SpaceObject

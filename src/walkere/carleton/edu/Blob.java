@@ -9,6 +9,7 @@ package walkere.carleton.edu;
 
 /**
  * Blob.java
+ *
  * Class for the avatar of the user in the game.
  */
 public class Blob extends SpaceObject {
