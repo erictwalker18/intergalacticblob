@@ -82,12 +82,14 @@ public class SpaceObjectTest {
 
     @Test
     public void testGetSize() throws Exception {
+        //Not trivial because we're using imageView, which can cause unexpected issues
         assertEquals(new javafx.geometry.Point2D(5,100) , nonMovingObject.getSize() );
         assertEquals(new javafx.geometry.Point2D(0,0) , strangeObjecct.getSize() );
     }
 
     @Test
     public void testSetSize() throws Exception {
+        //Not trivial because we're using imageView, which can cause unexpected issues
         nonMovingObject.setSize(40, 40);
         assertEquals(new javafx.geometry.Point2D(40,40) , nonMovingObject.getSize() );
         strangeObjecct.setSize(100, 500);

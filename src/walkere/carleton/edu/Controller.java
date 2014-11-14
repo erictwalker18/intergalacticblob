@@ -14,7 +14,8 @@ package walkere.carleton.edu;
  */
 public class Controller {
     //Instance Variables
-    private GameModel model;
+    private GameModel gameModel;
+    private HighScoresModel scoresModel;
     private final String SAVE_FILE = "";
 
     /**
@@ -26,14 +27,28 @@ public class Controller {
     /**
      * Serialization method. Saves the current model for later use.
      */
-    public void saveModel() {
+    public void saveGameModel() {
 
     }
 
     /**
      * Deserialization method. Loads a model from the default file.
      */
-    public void loadModel() {
+    public void loadGameModel() {
+
+    }
+
+    /**
+     * Serialization method. Saves the current high score for later use.
+     */
+    public void saveHighScore() {
+
+    }
+
+    /**
+     * Deserialization method. Loads a list of high scores from the default file.
+     */
+    public void loadHighScores() {
 
     }
 

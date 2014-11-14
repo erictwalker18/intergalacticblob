@@ -19,13 +19,14 @@ import java.util.HashMap;
 public class GameModel {
     //Instance Variables
     private ArrayList<SpaceObject> spaceObjects;
+    private Blob avatar;
     private int avatarPosition;
     private int score;
-    private HashMap<Integer, String> highscores;
+    private boolean isOver;
 
     /**
-     * Default constructor. Instantiates the list spaceObjects which holds the
-     * various walls and actors in it. Also instantiates various instance variables
+     * Default constructor. Instantiates the avatar Blob and the list spaceObjects
+     * which holds the various spaceJunks in it. Also instantiates various instance variables
      * that are used for keeping track of the score.
      */
     public GameModel() {
@@ -38,7 +39,8 @@ public class GameModel {
     }
 
     /**
-     * Updates all the SpaceObjects and the score.
+     * Updates all the SpaceObjects and the score. This also checks if the blob
+     * hit any of the horrible spaceJunk obstacles.
      */
     public void step() {
     }
@@ -66,5 +68,21 @@ public class GameModel {
      */
     public ArrayList<SpaceObject> getSpaceObjects() {
         return this.spaceObjects;
+    }
+
+    /**
+     *
+     * @return the avatar to get its position.
+     */
+    public Blob getAvatar() {
+        return this.avatar;
+    }
+
+    /**
+     * Tells the controller (or a test) whether or not the game is over.
+     * @return isOver, a boolean variable.
+     */
+    public boolean isOver() {
+        return this.isOver;
     }
 }
