@@ -2,6 +2,7 @@ package code;
 
 import javafx.geometry.Point2D;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  *
  * Model class that holds all the information that the scene is built from.
  */
-public class GameModel {
+public class GameModel  implements Serializable{
     //Instance Variables
     private ArrayList<SpaceObject> spaceObjects;
     private Blob avatar;

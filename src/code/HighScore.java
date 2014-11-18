@@ -10,7 +10,17 @@ package code; /**
  *
  * High score object for storing the values in a high score.
  */
-public class HighScore {
+public class HighScore implements Comparable<HighScore> {
+    @Override
+    public int compareTo(HighScore highScore) {
+        if (this.score < highScore.score)
+            return -1;
+        else if (this.score > highScore.score)
+            return 1;
+        else
+            return 0;
+    }
+
     //Instance Variables
     private int score;
     private String user;

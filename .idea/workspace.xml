@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79779462-fde5-45cc-ab2c-87087ea10bf0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/intergalactic.fxml" />
-      <change type="DELETED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\BlobTest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\Blob.java" afterPath="$PROJECT_DIR$/src/code/Blob.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\Controller.java" afterPath="$PROJECT_DIR$/src/code/Controller.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameModel.java" afterPath="$PROJECT_DIR$/src/code/GameModel.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameModelTest.java" afterPath="$PROJECT_DIR$/src/code/GameModelTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameView.java" afterPath="$PROJECT_DIR$/src/code/Main.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScore.java" afterPath="$PROJECT_DIR$/src/code/HighScore.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScoresModel.java" afterPath="$PROJECT_DIR$/src/code/HighScoresModel.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScoresModelTest.java" afterPath="$PROJECT_DIR$/src/code/HighScoresModelTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceJunk.java" afterPath="$PROJECT_DIR$/src/code/SpaceJunk.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceObject.java" afterPath="$PROJECT_DIR$/src/code/SpaceObject.java" />
-      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceObjectTest.java" afterPath="$PROJECT_DIR$/src/code/SpaceObjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/GameModel.java" afterPath="$PROJECT_DIR$/src/code/GameModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/HighScore.java" afterPath="$PROJECT_DIR$/src/code/HighScore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/code/HighScoresModel.java" afterPath="$PROJECT_DIR$/src/code/HighScoresModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="intergalacticblob.iws" />
@@ -39,16 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="intergalactic.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/code/intergalactic.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,49 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/code/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1105">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Blob.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="714">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
               <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HighScoresModel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
+      <file leaf-file-name="GameModel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8466742" vertical-offset="116" max-vertical-offset="1003">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighScore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="850">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36008918" vertical-offset="0" max-vertical-offset="1700">
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -163,9 +114,10 @@
         <option value="$PROJECT_DIR$/src/code/intergalactic.fxml" />
         <option value="$PROJECT_DIR$/src/code/Blob.java" />
         <option value="$PROJECT_DIR$/src/code/Main.java" />
-        <option value="$PROJECT_DIR$/src/code/GameModel.java" />
         <option value="$PROJECT_DIR$/src/code/Controller.java" />
+        <option value="$PROJECT_DIR$/src/code/HighScore.java" />
         <option value="$PROJECT_DIR$/src/code/HighScoresModel.java" />
+        <option value="$PROJECT_DIR$/src/code/GameModel.java" />
       </list>
     </option>
   </component>
@@ -543,7 +495,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -561,7 +513,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26931107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26931107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -926,11 +878,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36734694" vertical-offset="56" max-vertical-offset="1700">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.3501144" vertical-offset="51" max-vertical-offset="1020">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53296703" vertical-offset="93" max-vertical-offset="1156">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -952,25 +916,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="850">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36008918" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8466742" vertical-offset="116" max-vertical-offset="1003">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

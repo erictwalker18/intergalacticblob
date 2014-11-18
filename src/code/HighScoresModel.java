@@ -31,7 +31,16 @@ public class HighScoresModel implements Serializable {
      * @param date the time of the high score
      */
     public void addHighScore(int score, String user, String date) {
-        highScores.add(new HighScore(score, user, date));
+        int indexToAdd = 0;
+        HighScore highScoreToAdd = new HighScore(score, user, date);
+        while (indexToAdd < this.highScores.size()) {
+            //if the high score we're adding is larger than the one at the index, add it
+            if (highScoreToAdd.compareTo(this.highScores.get(indexToAdd)) > 0) {
+                this.highScores.add(indexToAdd, highScoreToAdd);
+                return;
+            }
+        }
+        highScores.add(highScoreToAdd);
     }
 
     /**
