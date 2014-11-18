@@ -29,20 +29,6 @@ public class Controller {
     }
 
     /**
-     * Serialization method. Saves the current model for later use.
-     */
-    public void saveGameModel() {
-
-    }
-
-    /**
-     * Deserialization method. Loads a model from the default file.
-     */
-    public void loadGameModel() {
-
-    }
-
-    /**
      * Serialization method. Saves the current high score for later use.
      */
     public void saveHighScore() {

@@ -8,7 +8,7 @@ package code; /**
 /**
  * Blob.java
  *
- * Class for the avatar of the user in the game.
+ * View for the avatar of the user in the game.
  */
 public class Blob extends SpaceObject {
 
@@ -19,18 +19,4 @@ public class Blob extends SpaceObject {
         super();
         this.setImage("/res/Blob.png");
     }
-    /**
-     * @param spaceJunk the SpaceJunk to check an intersection with
-     * @return true if the mighty Blob has been crippled by a spaceJunk, false if
-     *     Blob has managed to live another step.
-     */
-    /* DEPRECATED
-    public boolean isHit(SpaceJunk spaceJunk) {
-        Point2D spaceJunkPosition = spaceJunk.getPosition();
-        if (this.intersects(spaceJunkPosition.getX(), spaceJunkPosition.getY(),
-                spaceJunk.getSize().getX(), spaceJunk.getSize().getY() )) {
-            return true;
-        }
-        return false;
-    } */
 }

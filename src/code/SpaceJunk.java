@@ -7,7 +7,8 @@ package code; /**
 
 /**
  * SpaceJunk.java
- * Class for all the wall objects that are created.
+ *
+ * View for all the wall objects that are created.
  */
 public class SpaceJunk extends SpaceObject {
 
@@ -16,6 +17,6 @@ public class SpaceJunk extends SpaceObject {
      */
     public SpaceJunk() {
         super();
-        this.setImage("/edu/res/Blob.png");
+        this.setImage("/res/Blob.png");
     }
 }

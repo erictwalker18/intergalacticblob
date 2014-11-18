@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * Model class that holds all the information that the scene is built from.
  */
-public class GameModel  implements Serializable{
+public class GameModel {
     //Instance Variables
     private ArrayList<SpaceObject> spaceObjects;
     private Blob avatar;
@@ -31,12 +31,8 @@ public class GameModel  implements Serializable{
      * that are used for keeping track of the score.
      */
     public GameModel() {
-        //These aren't the implementations you're looking for...
-        //... Move along.
-        //spaceObjects = new ArrayList<SpaceObject>();
-        //position = 0;
-        //score = 0;
-        //score = new Label(score);
+        spaceObjects = new ArrayList<SpaceObject>();
+        this.score = 0;
     }
 
     /**

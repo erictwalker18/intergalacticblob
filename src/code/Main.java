@@ -8,11 +8,15 @@ package code; /**
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.geometry.Point2D;
 
 /**
  * Main class that starts everything up.
@@ -37,19 +41,17 @@ public class Main extends Application {
 
         //FXMLLoader loader = new FXMLLoader(getClass().getResource("intergalactic.fxml"));
         //Parent root = (Parent)loader.load();
-        Group root = new Group();
-        Scene scene = new Scene(root, 600, 400);
-        primaryStage.setTitle("The Intergalactic Adventure of Blob");
+        Group root = new Group(new Text(25,25,"Hello World!"));
         Blob b = new Blob();
-        b.setSize(50,50);
-        b.setVelocity(1,1);
         b.setPosition(0,0);
-        b.setImage("/res/Blob.png");
+        b.setSize(100,100);
         root.getChildren().add(b);
+        Scene scene = new Scene(root, 1000, 800);
+        primaryStage.setTitle("The Intergalactic Adventure of Blob");
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
     /**
      * Essentially the main method for the view. Launches the view and makes
      * everything pretty!

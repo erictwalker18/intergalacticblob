@@ -106,11 +106,15 @@ public abstract class SpaceObject extends Group {
         this.imageView.setFitHeight(height);
     }
 
-
+    /**
+     * Sets the image to the given filename
+     * @param filename the name of the image file
+     */
     public void setImage(String filename) {
-        this.image = new Image(getClass().getResourceAsStream("/res/Blob.png"));
+        this.image = new Image(getClass().getResourceAsStream(filename));
         this.imageView.setImage(this.image);
     }
+
     /**
      * Moves the SpaceObject one step in the direction and magnitude of its velocity.
      */
