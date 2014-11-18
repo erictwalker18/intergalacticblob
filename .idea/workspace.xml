@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79779462-fde5-45cc-ab2c-87087ea10bf0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java" afterPath="$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java" afterPath="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java" afterPath="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/GameView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/code/intergalactic.fxml" />
+      <change type="DELETED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\BlobTest.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\Blob.java" afterPath="$PROJECT_DIR$/src/code/Blob.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\Controller.java" afterPath="$PROJECT_DIR$/src/code/Controller.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameModel.java" afterPath="$PROJECT_DIR$/src/code/GameModel.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameModelTest.java" afterPath="$PROJECT_DIR$/src/code/GameModelTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\GameView.java" afterPath="$PROJECT_DIR$/src/code/Main.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScore.java" afterPath="$PROJECT_DIR$/src/code/HighScore.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScoresModel.java" afterPath="$PROJECT_DIR$/src/code/HighScoresModel.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\HighScoresModelTest.java" afterPath="$PROJECT_DIR$/src/code/HighScoresModelTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceJunk.java" afterPath="$PROJECT_DIR$/src/code/SpaceJunk.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceObject.java" afterPath="$PROJECT_DIR$/src/code/SpaceObject.java" />
+      <change type="MOVED" beforePath="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\SpaceObjectTest.java" afterPath="$PROJECT_DIR$/src/code/SpaceObjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="intergalacticblob.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,97 +39,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
+      <file leaf-file-name="intergalactic.fxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/code/intergalactic.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1411">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameModelTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+        <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1156">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighScoresModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HighScoresModelTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModelTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-              <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="1513">
+              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
               <folding>
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#263#264#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpaceObject.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/code/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5871711" vertical-offset="85" max-vertical-offset="1785">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1105">
+              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
               <folding>
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blob.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="714">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HighScoresModel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8466742" vertical-offset="116" max-vertical-offset="1003">
+              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="HighScore.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScore.java">
+        <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="884">
-              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpaceObjectTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="969">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blob.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="850">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,27 +125,54 @@
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Main.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Model.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/StartModel.java" />
-        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/GameView.java" />
-        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/BlobTest.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunkTest.java" />
-        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/HighScore.java" />
-        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModel.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModelTest.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java" />
-        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/HighScore.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/GameView.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/fxmlTest.xml" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/fxmlTest.fxml" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java" />
         <option value="$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/blobMVC/code/fxmlTest.fxml" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/Controller.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/SpaceJunk.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/GameModel.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/BlobTest.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/BlobModel.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/Blob.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/GameView.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/Main.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/fxmlTest.fxml" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/code/SpaceObject.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/src/Blob.java" />
+        <option value="$PROJECT_DIR$/src/walkere/carleton/edu/src/SpaceObject.java" />
+        <option value="$PROJECT_DIR$/src/SpaceObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/code/BlobtesterTest.java" />
+        <option value="$PROJECT_DIR$/src/code/BlobTest.java" />
+        <option value="$PROJECT_DIR$/src/code/GameModelTest.java" />
+        <option value="$PROJECT_DIR$/src/code/HighScoresModelTest.java" />
+        <option value="$PROJECT_DIR$/src/code/SpaceObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/code/fxmlTest.fxml" />
+        <option value="$PROJECT_DIR$/src/code/intergalactic.fxml" />
+        <option value="$PROJECT_DIR$/src/code/Blob.java" />
+        <option value="$PROJECT_DIR$/src/code/Main.java" />
+        <option value="$PROJECT_DIR$/src/code/GameModel.java" />
+        <option value="$PROJECT_DIR$/src/code/Controller.java" />
+        <option value="$PROJECT_DIR$/src/code/HighScoresModel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -169,7 +182,13 @@
             <id />
           </State>
           <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
             <id>General</id>
+          </State>
+          <State>
+            <id>XML</id>
           </State>
           <State>
             <id>XPath</id>
@@ -180,7 +199,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Abstraction issues</id>
+            <id>XmlUnboundNsPrefix</id>
           </State>
         </selected-state>
       </profile-state>
@@ -212,7 +231,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -246,12 +264,31 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intergalacticblob" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intergalacticblob" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,8 +301,8 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../encodinghelper" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sprites" />
+    <property name="options.lastSelected" value="preferences.externalResources" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -276,58 +313,27 @@
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="code" />
+      <recent name="walkere.carleton.edu" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="walkere.carleton.edu" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric\Documents\intergalacticblob\src\res" />
+      <recent name="C:\Users\Eric\Documents\intergalacticblob\src\code" />
+      <recent name="C:\Users\Eric\Documents\intergalacticblob\src2" />
+      <recent name="C:\Users\Eric\Documents\intergalacticblob\src" />
+      <recent name="C:\Users\Eric\Documents\intergalacticblob\src\walkere\carleton\edu\imageFiles" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HighScoresModelTest">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="walkere.carleton.edu.Controller" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="intergalacticblob" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="SpaceObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="intergalacticblob" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="walkere.carleton.edu" />
-      <option name="MAIN_CLASS_NAME" value="walkere.carleton.edu.SpaceObjectTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="GameModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="intergalacticblob" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="walkere.carleton.edu" />
+      <option name="PACKAGE_NAME" value="walkere.carleton.blobMVC.code" />
       <option name="MAIN_CLASS_NAME" value="walkere.carleton.edu.GameModelTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
@@ -349,7 +355,7 @@
       <module name="intergalacticblob" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="walkere.carleton.edu" />
+      <option name="PACKAGE_NAME" value="walkere.carleton.blobMVC.code" />
       <option name="MAIN_CLASS_NAME" value="walkere.carleton.edu.HighScoresModelTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
@@ -492,20 +498,34 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="5">
+    <configuration default="false" name="Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="code.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="intergalacticblob" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SpaceObjectTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GameModelTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HighScoresModelTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BlobTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GameModelTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HighScoresModelTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BlobTest" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JUnit.HighScoresModelTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.GameModelTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.BlobTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SpaceObjectTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -522,7 +542,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -535,19 +555,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284055" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26931107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284055" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -568,7 +588,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -576,101 +596,97 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="1581">
           <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
           <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1156">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="986">
           <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScore.java">
+    <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="884">
           <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="1938">
           <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1275">
           <caret line="64" column="84" selection-start-line="64" selection-start-column="84" selection-end-line="64" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="561">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1989">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="1938">
-          <caret line="105" column="56" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="1938">
+          <caret line="105" column="56" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="799">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
@@ -678,66 +694,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/BlobTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceJunk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="867">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1989">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1037">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="867">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1989">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1037">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="799">
           <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
@@ -745,50 +748,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/BlobTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="306">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceJunk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="765">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1972">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="765">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1972">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="595">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -796,43 +788,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceJunk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="408">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="357">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="357">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,103 +836,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceJunk.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4194079" vertical-offset="0" max-vertical-offset="608">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="906">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/Blob.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceJunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/BlobTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="608">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameView.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32730263" vertical-offset="22" max-vertical-offset="663">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="884">
-          <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/code/GameModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1411">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModelTest.java">
+    <entry file="file://$PROJECT_DIR$/src/code/HighScoresModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="21" column="103" selection-start-line="21" selection-start-column="103" selection-end-line="21" selection-end-column="103" />
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/HighScoresModel.java">
+    <entry file="file://$PROJECT_DIR$/src/code/SpaceObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/GameModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/Blob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="969">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/walkere/carleton/edu/SpaceObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5871711" vertical-offset="85" max-vertical-offset="1785">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="1003">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/fxmlTest.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/intergalactic.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="478" max-vertical-offset="1105">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/GameModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36734694" vertical-offset="56" max-vertical-offset="1700">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Blob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="714">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="1513">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/HighScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="850">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/code/HighScoresModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8466742" vertical-offset="116" max-vertical-offset="1003">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
           </folding>
         </state>
       </provider>

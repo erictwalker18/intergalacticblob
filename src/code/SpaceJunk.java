@@ -1,0 +1,21 @@
+package code; /**
+ * BlobStudios
+ * Eric Walker
+ * CS 257 Final Project
+ * Created on 11/12/2014.
+ */
+
+/**
+ * SpaceJunk.java
+ * Class for all the wall objects that are created.
+ */
+public class SpaceJunk extends SpaceObject {
+
+    /**
+     * Default constructor. Instantiates the SpaceJunk with the default image.
+     */
+    public SpaceJunk() {
+        super();
+        this.setImage("/edu/res/Blob.png");
+    }
+}
