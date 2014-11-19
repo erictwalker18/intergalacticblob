@@ -8,9 +8,10 @@ package code; /**
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
-import javafx.scene.Group;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -39,13 +40,10 @@ public class Main extends Application {
             }
         });
 
-        //FXMLLoader loader = new FXMLLoader(getClass().getResource("intergalactic.fxml"));
-        //Parent root = (Parent)loader.load();
-        Group root = new Group(new Text(25,25,"Hello World!"));
-        Blob b = new Blob();
-        b.setPosition(0,0);
-        b.setSize(100,100);
-        root.getChildren().add(b);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("intergalactic.fxml"));
+        Parent root = (Parent)loader.load();
+        final Controller controller = loader.getController();
+        //Group root = new Group();
         Scene scene = new Scene(root, 1000, 800);
         primaryStage.setTitle("The Intergalactic Adventure of Blob");
 

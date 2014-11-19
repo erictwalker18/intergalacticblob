@@ -30,7 +30,8 @@ public abstract class SpaceObject extends Group {
 
     public SpaceObject() {
         this.imageView = new ImageView();
-        this.name = "Hi";
+        this.getChildren().add(this.imageView);
+        this.name = "Avatar";
         this.velocity = new Point2D(0,0);
     }
 

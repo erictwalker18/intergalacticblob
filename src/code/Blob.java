@@ -19,4 +19,10 @@ public class Blob extends SpaceObject {
         super();
         this.setImage("/res/Blob.png");
     }
+
+    @Override
+    public void step() {
+        super.step();
+        this.setVelocity(this.getVelocity().getX(), this.getVelocity().getY()-1);
+    }
 }

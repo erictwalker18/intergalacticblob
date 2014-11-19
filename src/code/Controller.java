@@ -13,8 +13,14 @@ package code;
  */
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
 
 import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Controller {
     //Instance Variables
@@ -22,11 +28,13 @@ public class Controller {
     private HighScoresModel scoresModel;
     private final String SAVE_FILE = "";
 
+    @FXML
+    private GridPane gridPane;
+
     /**
      * Default constructor.
      */
-    public Controller() {
-    }
+    public Controller() {}
 
     /**
      * Serialization method. Saves the current high score for later use.
@@ -65,7 +73,13 @@ public class Controller {
         }
     }
 
-    public void printStuff() {
-        System.out.println("I did a thing!");
+    public void onStartButton() {
+        System.out.println("I did a thingy yo");
+        Blob b = new Blob();
+        b.setSize(100,100);
+        SpaceJunk s = new SpaceJunk();
+        gridPane.getChildren().clear();
+        gridPane.add(b, 0, 1);
+        gridPane.add(s, 0, 2);
     }
 }
