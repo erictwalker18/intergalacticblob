@@ -18,6 +18,6 @@ public class SpaceJunk extends SpaceObject {
     public SpaceJunk() {
         super();
         this.setImage("/res/metalSpaceJunk.png");
-        this.setSize(90,60);
+        this.setSize(30,20);
     }
 }

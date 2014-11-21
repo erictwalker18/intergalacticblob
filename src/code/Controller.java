@@ -12,29 +12,35 @@ package code;
  * Main class that runs the entire program.
  */
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
+import javafx.scene.Group;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements EventHandler<KeyEvent> {
     //Instance Variables
     private GameModel gameModel;
     private HighScoresModel scoresModel;
     private final String SAVE_FILE = "";
+    private Group rootGroup;
+
+    private boolean hasStarted = false;
 
     @FXML
-    private GridPane gridPane;
+    private AnchorPane anchorPane;
 
     /**
      * Default constructor.
      */
-    public Controller() {}
+    public Controller() {
+        this.gameModel = new GameModel();
+    }
 
     /**
      * Serialization method. Saves the current high score for later use.
@@ -73,13 +79,45 @@ public class Controller {
         }
     }
 
+    public void showStartButton() {
+        Button startButton = new Button("Start");
+        startButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override public void handle(MouseEvent e) {
+                onStartButton();
+                e.consume();
+            }
+        });
+        this.anchorPane.getChildren().add(startButton);
+    }
+
+    /**
+     * What happens when the user selects the start button!
+     */
     public void onStartButton() {
-        System.out.println("I did a thingy yo");
-        Blob b = new Blob();
-        b.setSize(100,100);
-        SpaceJunk s = new SpaceJunk();
-        gridPane.getChildren().clear();
-        gridPane.add(b, 0, 1);
-        gridPane.add(s, 0, 2);
+        if (!hasStarted) {
+            this.anchorPane.getChildren().get(0).setOpacity(0.0);
+            this.gameModel.setPane(this.anchorPane);
+            this.gameModel.getBoringWalls();
+            hasStarted = true;
+        }
+    }
+
+    /**
+     * Simple getter for the model.
+     * @return
+     */
+    public GameModel getGameModel() {
+        return this.gameModel;
+    }
+
+    @Override
+    public void handle(KeyEvent event) {
+        System.out.println(event.getCharacter());
+        Blob avatar= this.gameModel.getAvatar();
+        if (event.getCode().isWhitespaceKey()) {
+            this.gameModel.getAvatar().setVelocity(0, this.gameModel.getAvatar()
+                .getVelocity().getY()-15);
+            event.consume();
+        }
     }
 }

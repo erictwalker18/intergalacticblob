@@ -18,11 +18,17 @@ public class Blob extends SpaceObject {
     public Blob() {
         super();
         this.setImage("/res/Blob.png");
+        this.setSize(80,80);
     }
 
+    /**
+     * Steps the blob. Overridden to account for gravity.
+     */
     @Override
     public void step() {
         super.step();
-        this.setVelocity(this.getVelocity().getX(), this.getVelocity().getY()-1);
+        this.setVelocity(this.getVelocity().getX(), this.getVelocity().getY()+1);
+        if (this.getLayoutY() > 700)
+            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY()+1);
     }
 }

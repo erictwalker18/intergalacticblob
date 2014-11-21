@@ -1,14 +1,11 @@
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.Group?>
 <?import code.View?>
 
 <?import javafx.scene.control.Button?>
-<GridPane fx:id="gridPane"
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="anchorPane"
         fx:controller="code.Controller"
-        xmlns:fx="http://javafx.com/fxml"
-        alignment="center"
-        hgap="10"
-        vgap="10" >
-        <Button GridPane.rowIndex="0" text="Start" onAction="#onStartButton" />
-</GridPane>
+        xmlns:fx="http://javafx.com/fxml" >
+</AnchorPane>

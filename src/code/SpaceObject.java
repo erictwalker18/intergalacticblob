@@ -1,11 +1,14 @@
 package code;
 
+import javafx.event.ActionEvent;
 import javafx.scene.Group;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 /**
  * BlobStudios
@@ -25,13 +28,13 @@ import javafx.fxml.FXML;
 public abstract class SpaceObject extends Group {
     private String name;
     private Point2D velocity;
-    private ImageView imageView;
+    public ImageView imageView;
     private Image image;
 
     public SpaceObject() {
         this.imageView = new ImageView();
         this.getChildren().add(this.imageView);
-        this.name = "Avatar";
+        this.name = "SpaceObject";
         this.velocity = new Point2D(0,0);
     }
 
@@ -123,4 +126,5 @@ public abstract class SpaceObject extends Group {
         Point2D position = this.getPosition();
         this.setPosition(position.getX() + this.velocity.getX(), position.getY() + this.velocity.getY());
     }
+
 }

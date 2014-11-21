@@ -11,6 +11,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -43,12 +44,17 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("intergalactic.fxml"));
         Parent root = (Parent)loader.load();
         final Controller controller = loader.getController();
-        //Group root = new Group();
+
+        root.setOnKeyPressed(controller);
+
+        controller.showStartButton();
+
         Scene scene = new Scene(root, 1000, 800);
         primaryStage.setTitle("The Intergalactic Adventure of Blob");
 
         primaryStage.setScene(scene);
         primaryStage.show();
+        controller.getGameModel().setUpAnimationTimer();
     }
     /**
      * Essentially the main method for the view. Launches the view and makes
