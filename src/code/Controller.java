@@ -89,17 +89,6 @@ public class Controller implements EventHandler<KeyEvent> {
         }
     }
 
-    public void showStartButton() {
-        Button startButton = new Button("Start");
-        startButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override public void handle(MouseEvent e) {
-                onStartButton();
-                e.consume();
-            }
-        });
-        this.anchorPane.getChildren().add(startButton);
-    }
-
     /**
      * What happens when the user selects the start button!
      */
@@ -171,9 +160,7 @@ public class Controller implements EventHandler<KeyEvent> {
             }
         };
 
-        //Game takes a little bit to load, so we don't start until two seconds in...
-        final long startTimeInMilliseconds = 2000;
-        final long repetitionPeriodInMilliseconds = 100;
+        final long startTimeInMilliseconds = 0;
         long frameTimeInMilliseconds = (long)(1000.0 / FRAMES_PER_SECOND);
         this.timer = new java.util.Timer();
         this.timer.schedule(timerTask, startTimeInMilliseconds, frameTimeInMilliseconds);

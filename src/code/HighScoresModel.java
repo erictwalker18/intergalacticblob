@@ -62,4 +62,8 @@ public class HighScoresModel implements Serializable {
         }
         return outString;
     }
+
+    public String getHighScoreAt(int index) {
+        return this.highScores.get(index).toString();
+    }
 }
