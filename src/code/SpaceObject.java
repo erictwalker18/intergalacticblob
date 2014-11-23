@@ -94,7 +94,6 @@ public abstract class SpaceObject extends Group {
      * @return the size of the ImageView that makes up the picture of the SpaceObject
      */
     public Point2D getSize() {
-        Bounds bounds = this.getLayoutBounds();
         Point2D size = new Point2D(this.imageView.getFitWidth(), this.imageView.getFitHeight());
         return size;
     }

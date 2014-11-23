@@ -1,13 +1,19 @@
 package code;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.geometry.Point2D;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -31,6 +37,7 @@ public class GameModel {
     private Blob avatar;
     private int score;
     private boolean isOver;
+    private Random randomNumberGenerator;
 
     /**
      * Default constructor. Instantiates the avatar Blob and the list spaceObjects
@@ -39,10 +46,7 @@ public class GameModel {
      */
     public GameModel() {
         this.group = new Group();
-        //ImageView imageView = new ImageView();
-        //imageView.setFitWidth(1000);
-        //imageView.setFitHeight(800);
-        //this.group.getChildren().add(imageView);
+        this.randomNumberGenerator = new Random();
         this.spaceObjects = new ArrayList<SpaceObject>();
         this.avatar = new Blob();
         this.score = 0;
@@ -55,16 +59,27 @@ public class GameModel {
      */
     public void step() {
         this.avatar.step();
+        if (this.avatar.getPosition().getX() > 920) {
+            this.avatar.setPosition(920, this.avatar.getPosition().getY());
+            this.avatar.setVelocity(0, this.avatar.getVelocity().getY());
+        }
+        else if (this.avatar.getPosition().getX() < 0) {
+            this.avatar.setPosition(0, this.avatar.getPosition().getY());
+            this.avatar.setVelocity(0, this.avatar.getVelocity().getY());
+        }
         for (SpaceObject s: spaceObjects) {
-            if (s.getPosition().getX() == 0 && s.getVelocity().getX() != 0)
-                s.setPosition(1080, s.getPosition().getY());
+            if (s.getPosition().getX() == -30 && s.getVelocity().getX() != 0) {
+                //s.setPosition(1080, s.getPosition().getY());
+                //spaceObjects.remove(s);
+                this.group.getChildren().remove(s);
+            }
             s.step();
         }
         this.score++;
         System.out.println(this.score);
-        //if (isHit()) {
-            //System.out.println("Ouchie");
-        //}
+        if (isHit()) {
+            System.out.println("Ouchie");
+        }
     }
 
     /**
@@ -73,7 +88,9 @@ public class GameModel {
      * @param y the y location for the spaceJunk
      */
     public void addSpaceJunk(double x, double y) {
-
+        SpaceJunk junkToAdd = new SpaceJunk();
+        junkToAdd.setPosition(x, y);
+        this.spaceObjects.add(junkToAdd);
     }
 
 
@@ -119,13 +136,34 @@ public class GameModel {
      * @return true if the avatar has hit a spaceJunk, false if not
      */
     public boolean isHit() {
+        Double avatarPositionX = this.avatar.getPosition().getX();
+        Double avatarPositionY = this.avatar.getPosition().getY();
+        Double avatarWidth = this.avatar.getSize().getX();
+        Double avatarHeight = this.avatar.getSize().getY();
         for (SpaceObject spaceJunk : this.spaceObjects) {
-            Point2D spaceJunkPosition = spaceJunk.getPosition();
-            Point2D avatarPosition = this.avatar.getPosition();
-            if (this.avatar.intersects(spaceJunk.getBoundsInLocal())) {
+            Double spaceJunkPositionX = spaceJunk.getPosition().getX();
+            Double spaceJunkPositionY = spaceJunk.getPosition().getY();
+            Double spaceJunkWidth = spaceJunk.getSize().getX();
+            Double spaceJunkHeight = spaceJunk.getSize().getY();
+            //if top left corner of blob is within the rectangle:
+            isOver = true;
+            if (avatarPositionX > spaceJunkPositionX && avatarPositionX < spaceJunkPositionX + spaceJunkWidth
+                && avatarPositionY + 16 > spaceJunkPositionY && avatarPositionY + 16 < spaceJunkPositionY + spaceJunkHeight)
                 return true;
-            }
+            //if top right corner of the blob conflicting:
+            else if (avatarPositionX + avatarWidth > spaceJunkPositionX && avatarPositionX + avatarWidth < spaceJunkPositionX + spaceJunkWidth
+                    && avatarPositionY > spaceJunkPositionY && avatarPositionY < spaceJunkPositionY + spaceJunkHeight)
+                return true;
+                //if bottom left corner of the blob conflicting:
+            else if (avatarPositionX > spaceJunkPositionX && avatarPositionX < spaceJunkPositionX + spaceJunkWidth
+                    && avatarPositionY + avatarHeight > spaceJunkPositionY && avatarPositionY + avatarHeight < spaceJunkPositionY + spaceJunkHeight)
+                return true;
+                //if bottom right corner of the blob conflicting:
+            else if (avatarPositionX + avatarWidth > spaceJunkPositionX && avatarPositionX + avatarWidth < spaceJunkPositionX + spaceJunkWidth
+                    && avatarPositionY + avatarHeight > spaceJunkPositionY && avatarPositionY + avatarHeight < spaceJunkPositionY + spaceJunkHeight)
+                return true;
         }
+        isOver = false;
         return false;
     }
 
@@ -133,19 +171,18 @@ public class GameModel {
      * Builds a bunch of boring walls...
      */
     public void getBoringWalls() {
+        SpaceJunk background = new SpaceJunk();
+        background.setVelocity(0,0);
+        background.setSize(1000,800);
+        background.setColor(Color.BLACK);
+        this.group.getChildren().add(background);
         this.avatar = new Blob();
-        this.avatar.setPosition(0, 350);
+        this.avatar.setPosition(30, 350);
         this.avatar.setVelocity(0,0);
         this.group.getChildren().add(this.avatar);
-        for (int i=0; i<74; i++) {
+        for (int i = 0; i < 72; i++) {
             SpaceJunk junk = new SpaceJunk();
-            if (i < 72) {
-                junk.setPosition(i * 30 / 2 - (i % 2) * 15, (i % 2) * 780);
-                junk.setVelocity(-5, 0);
-            } else {
-                junk.setPosition(0, (i % 2) * 780);
-                junk.setVelocity(0, 0);
-            }
+            junk.setPosition(i * 30 / 2 - (i % 2) * 15, (i % 2) * 780);
             this.spaceObjects.add(junk);
             this.group.getChildren().add(junk);
         }
@@ -153,23 +190,22 @@ public class GameModel {
     }
 
     /**
-     * Sets up the animation that the model works through.
+     * Adds onto the walls that were already built, in a more interesting way
      */
-    public void setUpAnimationTimer() {
-        TimerTask timerTask = new TimerTask() {
-            public void run() {
-                Platform.runLater(new Runnable() {
-                    public void run() {
-                        step();
-                    }
-                });
-            }
-        };
-
-        final long startTimeInMilliseconds = 2000;
-        final long repetitionPeriodInMilliseconds = 100;
-        long frameTimeInMilliseconds = (long)(1000.0 / 30);
-        Timer timer = new java.util.Timer();
-        timer.schedule(timerTask, startTimeInMilliseconds, frameTimeInMilliseconds);
+    public void getNextWallSection() {
+        //int nextTopHeight = this.randomNumberGenerator.nextInt(3);
+        double nextSinHeight = Math.sin(this.score) * (this.score % 1500 / 100) + (this.score % 1500 / 100);
+        for (int i = 0; i < nextSinHeight; i++) {
+            SpaceJunk junk = new SpaceJunk();
+            junk.setPosition(1075, i*20);
+            this.spaceObjects.add(junk);
+            this.group.getChildren().add(junk);
+        }
+        for (int i = 0; i < 38 - nextSinHeight - (25 - this.score % 1000 / 100); i++) {
+            SpaceJunk junk = new SpaceJunk();
+            junk.setPosition(1075, 800 - i * 20);
+            this.spaceObjects.add(junk);
+            this.group.getChildren().add(junk);
+        }
     }
 }

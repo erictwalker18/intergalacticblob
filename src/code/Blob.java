@@ -30,5 +30,7 @@ public class Blob extends SpaceObject {
         this.setVelocity(this.getVelocity().getX(), this.getVelocity().getY()+1);
         if (this.getLayoutY() > 700)
             this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY()+1);
+        else if (this.getLayoutY() < 0)
+            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY()+1);
     }
 }

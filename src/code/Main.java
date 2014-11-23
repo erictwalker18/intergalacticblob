@@ -54,7 +54,6 @@ public class Main extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.show();
-        controller.getGameModel().setUpAnimationTimer();
     }
     /**
      * Essentially the main method for the view. Launches the view and makes
