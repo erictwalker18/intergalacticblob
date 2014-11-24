@@ -71,4 +71,8 @@ public class HighScoresModel implements Serializable {
     public HighScore get(int index) {
         return this.highScores.get(index);
     }
+
+    public ArrayList<HighScore> getScoreList() {
+        return this.highScores;
+    }
 }

@@ -39,6 +39,7 @@ public class Controller implements EventHandler<KeyEvent> {
     private boolean paused;
     private Timer timer;
     private int frameNumber;
+    private Button pauseButton;
 
     private boolean hasStarted = false;
 
@@ -117,7 +118,7 @@ public class Controller implements EventHandler<KeyEvent> {
             this.anchorPane.getChildren().clear();
             this.gameModel.setPane(this.anchorPane);
             this.gameModel.getBoringWalls();
-            Button pauseButton = new Button("Pause");
+            this.pauseButton = new Button("Pause");
             pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
@@ -132,8 +133,10 @@ public class Controller implements EventHandler<KeyEvent> {
     public void onPauseButton() {
         if (this.paused) {
             this.setUpAnimationTimer();
+            this.pauseButton.setText("Pause");
         } else {
             this.timer.cancel();
+            this.pauseButton.setText("Resume");
         }
         this.paused = !this.paused;
     }

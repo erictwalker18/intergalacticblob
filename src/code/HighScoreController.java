@@ -24,21 +24,13 @@ public class HighScoreController {
     }
 
     public void onHelloButton() {
-
         scoresModel = new HighScoresModel();
-        scoresModel.addHighScore(-1301, "eric", "testing day");
-        scoresModel.addHighScore(9001, "jeff", "finish day");
-        HighScoreView scoreView1 = new HighScoreView();
-        HighScoreView scoreView2 = new HighScoreView();
-        scoreView1.setScoresModel(scoresModel);
-        scoreView2.setScoresModel(scoresModel);
-        scoreView1.setScoreIndex(0);
-        scoreView2.setScoreIndex(1);
-        scoreView1.update();
-        scoreView2.update();
-        anchorPane.getChildren().add(scoreView1);
-        anchorPane.getChildren().add(scoreView2);
-        anchorPane.setTopAnchor(scoreView1, 100.0);
-        anchorPane.setTopAnchor(scoreView2, 200.0);
+        scoresModel.addHighScore(-1301, "Eric", "testing day");
+        scoresModel.addHighScore(9001, "Jeff", "finish day");
+        HighScoreView scoreView = new HighScoreView();
+        scoreView.setScoresModel(scoresModel);
+        scoreView.update();
+        anchorPane.getChildren().add(scoreView);
+        anchorPane.setTopAnchor(scoreView, 100.0);
     }
 }

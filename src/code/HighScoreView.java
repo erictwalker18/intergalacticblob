@@ -3,7 +3,10 @@ package code;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.Group;
+import javafx.scene.control.Cell;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.paint.Color;
 
 /**
@@ -15,6 +18,7 @@ import javafx.scene.paint.Color;
 public class HighScoreView extends Group {
     private HighScoresModel scoresModel;
     private int scoreIndex;
+    private TableView tableView;
 
     @FXML private double width;
     @FXML private Color backgroundColor;
@@ -25,6 +29,7 @@ public class HighScoreView extends Group {
     public HighScoreView() {
         this.width = DEFAULT_WIDTH;
         this.backgroundColor = DEFAULT_BACKGROUND_COLOR;
+        this.tableView = new TableView();
     }
 
     public void setScoresModel(HighScoresModel scoresModel) {
@@ -65,15 +70,39 @@ public class HighScoreView extends Group {
     }
 
     public void update() {
+        String styleString = "-fx-border-color: green; -fx-background-color: white;" +
+                "-fx-padding: 5";
+        TableColumn scoreColumn = new TableColumn("Score");
+        TableColumn userColumn = new TableColumn("User");
+        TableColumn dateColumn = new TableColumn("Date");
+
+        //this.tableView.setItems(this.scoresModel.getScoreList());
+
+        tableView.getColumns().addAll(scoreColumn, userColumn, dateColumn);
+
+        tableView.setStyle(styleString);
+
+        this.getChildren().add(tableView);
+        /*
         Label label;
 
         this.getChildren().clear();
-
-        label = new Label(this.scoresModel.get(this.scoreIndex).getDate());
-        label.setStyle("-fx-border-color: red; -fx-background-color:white;");
-        this.getChildren().add(label);
+        String styleString = "-fx-border-color: green; -fx-background-color: white;" +
+                "-fx-padding: 5";
 
         label = new Label(Integer.toString(this.scoresModel.get(this.scoreIndex).getScore()));
+        label.setStyle(styleString);
         this.getChildren().add(label);
+
+        label = new Label(this.scoresModel.get(this.scoreIndex).getUser());
+        label.setStyle(styleString);
+        label.setLayoutX(100);
+        this.getChildren().add(label);
+
+        label = new Label(this.scoresModel.get(this.scoreIndex).getDate());
+        label.setStyle(styleString);
+        label.setLayoutX(200);
+        this.getChildren().add(label);
+        */
     }
 }
