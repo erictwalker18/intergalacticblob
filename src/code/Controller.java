@@ -170,6 +170,8 @@ public class Controller implements EventHandler<KeyEvent> {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
         Parent root = loader.load();
         HighScoreController highScoreController = loader.getController();
+        if (this.scoresModel == null)
+            this.scoresModel = new HighScoresModel();
         highScoreController.initialize(this.scoresModel);
         highScoresButton.getScene().setRoot(root);
     }
@@ -213,7 +215,6 @@ public class Controller implements EventHandler<KeyEvent> {
                 this.scoresModel = new HighScoresModel();
             }
             this.scoresModel.addHighScore(this.gameModel.getScore(), "Eric", "11-23-2014");
-            System.out.println(this.scoresModel.getHighScores(1));
             resetToStart();
         }
     }

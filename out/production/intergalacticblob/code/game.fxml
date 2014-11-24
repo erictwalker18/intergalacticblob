@@ -19,10 +19,10 @@
             <Font size="60.0"/>
         </font>
     </Button>
-    <Label text="Controls: \n
-                Enter or Tab: Make Blob Jump \n
-                A: Increase Velocity to the Left \n
-                D: Increase Velocity to the Right \n
-                P: Pause (or Resume)"
-          AnchorPane.topAnchor="100" wrapText="true"/>
+    <Label AnchorPane.topAnchor="100" AnchorPane.leftAnchor="30" text="Controls:"/>
+    <Label AnchorPane.topAnchor="120" AnchorPane.leftAnchor="30" text="Enter or tab: Jump"/>
+    <Label AnchorPane.topAnchor="140" AnchorPane.leftAnchor="30" text="A: Increase Velocity Left"/>
+    <Label AnchorPane.topAnchor="160" AnchorPane.leftAnchor="30" text="D: Increase Velocity Right"/>
+    <Label AnchorPane.topAnchor="180" AnchorPane.leftAnchor="30" text="P: Pause (or Resume)"/>
+
 </AnchorPane>

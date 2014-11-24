@@ -21,8 +21,8 @@ public class HighScoreView extends Group {
     private int scoreIndex;
     private TableView tableView;
 
-    @FXML private double width;
-    @FXML private Color backgroundColor;
+    private double width;
+    private Color backgroundColor;
 
     final double DEFAULT_WIDTH = 600.0;
     final Color DEFAULT_BACKGROUND_COLOR = Color.GREEN;
