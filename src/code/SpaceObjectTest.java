@@ -11,13 +11,11 @@ public class SpaceObjectTest {
     @Before
     public void setUp() {
         nonMovingObject = new Blob();
-        nonMovingObject.setName("Mr. Blobwall");
         nonMovingObject.setPosition(0,0);
         nonMovingObject.setVelocity(0,0);
         nonMovingObject.setSize(5,15);
 
         strangeObject = new SpaceJunk();
-        strangeObject.setName("Mr. Wallblob");
         strangeObject.setPosition(300, 100);
         strangeObject.setVelocity(0,0);
         strangeObject.setSize(5,15);

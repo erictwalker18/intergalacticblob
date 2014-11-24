@@ -1,22 +1,25 @@
-package code; /**
- * BlobStudios
- * Eric Walker
- * CS 257 Final Project
- * Created on 11/14/2014.
- */
+package code;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
+ * BlobStudios
+ * Eric Walker
+ * CS 257 Final Project
+ * Created on 11/23/2014.
+ */
+
+/**
  * HighScoresModel.java
  *
- * Model to hold all the high scores for later use.
+ * Model to hold all the high scores for later use. Has various methods for accessing the
+ * Scores in different ways.
  */
-public class HighScoresModel implements Serializable {
+
+public class HighScoresModel implements Serializable { //Implements Serializable for later use
     //Instance Variables
     private ArrayList<HighScore> highScores;
 
@@ -28,10 +31,10 @@ public class HighScoresModel implements Serializable {
     }
 
     /**
-     * Adds a high score to the list
+     * Adds a high score to the list, ordered by score.
      * @param score the score obtained by the user
-     * @param user the name of the user
-     * @param date the time of the high score
+     * @param user the name of the user (or whatever the user happened to type)
+     * @param date the time of the high score (or whatever the user happened to type)
      */
     public void addHighScore(int score, String user, String date) {
         int indexToAdd = 0;
@@ -48,6 +51,7 @@ public class HighScoresModel implements Serializable {
     }
 
     /**
+     * Getter for the number of high scores in the model.
      * @return the number of high scores in this model
      */
     public int getNumHighScores() {
@@ -55,30 +59,35 @@ public class HighScoresModel implements Serializable {
     }
 
     /**
-     * Gets a specific number of scores for the user
-     * @param numScores the number of scores the user wants
-     * @return a string with all the scores in string format
+     * Getter for a particular high score (in String Form), given an index.
+     * @param index the index of the high score in the list
+     * @return the String form of the high score in question
      */
-    public String getHighScores(int numScores) {
-        String outString = "";
-        for(int i = 0; i < numScores; i++) {
-            outString += this.highScores.get(i).toString() + "\n";
-        }
-        return outString;
-    }
-
-    public String getHighScoreAt(int index) {
+    public String getHighScoreStringAt(int index) {
         return this.highScores.get(index).toString();
     }
 
-    public HighScore get(int index) {
+    /**
+     * Getter for a particular high score, given an index.
+     * @param index the index of the high score in the list.
+     * @return the High Score object at the given index.
+     */
+    public HighScore getHighScoreAt(int index) {
         return this.highScores.get(index);
     }
 
+    /**
+     * Getter for the entire list of high scores, ordered by score.
+     * @return the highScores arraylist.
+     */
     public ArrayList<HighScore> getScoreList() {
         return this.highScores;
     }
 
+    /**
+     * Getter for an ObservableList, useful in creating TableViews
+     * @return an observableArrayList of high scores.
+     */
     public ObservableList<HighScore> getObservableList() {
         return FXCollections.observableArrayList(this.highScores);
     }

@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.control.Label?>
 <AnchorPane fx:id="anchorPane"
-        fx:controller="code.Controller"
+        fx:controller="code.GameController"
         xmlns:fx="http://javafx.com/fxml">
     <Button fx:id="startButton" text="Start" AnchorPane.topAnchor="300" AnchorPane.leftAnchor="350"
             textFill="black" onAction="#onStartButton">

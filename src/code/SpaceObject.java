@@ -1,14 +1,9 @@
 package code;
 
-import javafx.event.ActionEvent;
 import javafx.scene.Group;
-import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.fxml.FXML;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 /**
  * BlobStudios
@@ -19,43 +14,33 @@ import javafx.scene.input.KeyEvent;
 
 /**
  * SpaceObject.java
+ *
  * This class is the abstract class that all space objects will extend.
- * It contains methods that are necessary for building the model of
+ * It contains methods that are necessary for building the views of
  * The Intergalactic Adventure of Blob.
  *
- * Much of this src is borrowed from Jeff Ondich's Sprite Class
+ * Much of this code is borrowed from Jeff Ondich's Sprite Class
  */
 public abstract class SpaceObject extends Group {
-    private String name;
+    //Instance Variables
+    //This contains an ImageView as further work on this program
+    //will add to the obstacles Blob must face in his intergalactic
+    //adventure, which should have images associated with them.
     private Point2D velocity;
     public ImageView imageView;
     private Image image;
 
+    /**
+     * Constructor. Instantiates the ImageView and sets the velocity to 0.
+     */
     public SpaceObject() {
         this.imageView = new ImageView();
         this.getChildren().add(this.imageView);
-        this.name = "SpaceObject";
         this.velocity = new Point2D(0,0);
     }
 
     /**
-     * Gets the name of a SpaceObject
-     * @return this SpaceObject's name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * Sets the name of a SpaceObject
-     * @param newName for the SpaceObject
-     */
-    public void setName(String newName) {
-        this.name = newName;
-    }
-
-    /**
-     * Gets the position of a SpaceObject
+     * Getter for the position of a SpaceObject
      * @return this SpaceObject's position
      */
     public Point2D getPosition() {
@@ -63,7 +48,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Sets the position of a SpaceObject
+     * Setter the position of a SpaceObject
      * @param x the new x position for the SpaceObject
      * @param y the new y position for the SpaceObject
      */
@@ -73,7 +58,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Gets the velocity of a SpaceObject
+     * Getter the velocity of a SpaceObject
      * @return the velocity of the SpaceObject
      */
     public Point2D getVelocity() {
@@ -81,7 +66,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Sets the velocity of a SpaceObject
+     * Setter the velocity of a SpaceObject
      * @param vx the new x velocity for the SpaceObject
      * @param vy the new y velocity for the SpaceObject
      */
@@ -90,7 +75,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Gets the size of the ImageView that is the view of the SpaceObject
+     * Getter the size of the ImageView that is the view of the SpaceObject
      * @return the size of the ImageView that makes up the picture of the SpaceObject
      */
     public Point2D getSize() {
@@ -99,7 +84,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Sets the size of the ImageView that is the view of the SpaceObject
+     * Setter the size of the ImageView that is the view of the SpaceObject
      * @param width
      * @param height
      */
@@ -110,7 +95,7 @@ public abstract class SpaceObject extends Group {
     }
 
     /**
-     * Sets the image to the given filename
+     * Setter the image to the given filename
      * @param filename the name of the image file
      */
     public void setImage(String filename) {
@@ -125,5 +110,4 @@ public abstract class SpaceObject extends Group {
         Point2D position = this.getPosition();
         this.setPosition(position.getX() + this.velocity.getX(), position.getY() + this.velocity.getY());
     }
-
 }

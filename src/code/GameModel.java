@@ -1,21 +1,9 @@
 package code;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.geometry.Point2D;
 import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
-
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * BlobStudios
@@ -28,6 +16,8 @@ import java.util.TimerTask;
  * GameModel.java
  *
  * Model class that holds all the information that the scene is built from.
+ * Notably, it holds the walls (SpaceJunk objects), the avatar (a Blob object)
+ * and the current score.
  */
 public class GameModel {
     //Instance Variables
@@ -37,16 +27,14 @@ public class GameModel {
     private Blob avatar;
     private int score;
     private boolean isOver;
-    private Random randomNumberGenerator;
 
     /**
      * Default constructor. Instantiates the avatar Blob and the list spaceObjects
      * which holds the various spaceJunks in it. Also instantiates various instance variables
-     * that are used for keeping track of the score.
+     * that are used for keeping track of the score and the state of the game.
      */
     public GameModel() {
         this.group = new Group();
-        this.randomNumberGenerator = new Random();
         this.spaceObjects = new ArrayList<SpaceObject>();
         this.avatar = new Blob();
         this.score = 0;
@@ -54,8 +42,9 @@ public class GameModel {
     }
 
     /**
-     * Updates all the SpaceObjects and the score. This also checks if the blob
-     * hit any of the horrible spaceJunk obstacles.
+     * Updates all the SpaceJunks, Blob and the score. This also checks if the Blob
+     * hit any of the horrible spaceJunk obstacles or is trying to go off the screen,
+     * and deals with it.
      */
     public void step() {
         this.avatar.step();
@@ -69,21 +58,17 @@ public class GameModel {
         }
         for (SpaceObject s: spaceObjects) {
             if (s.getPosition().getX() == -30 && s.getVelocity().getX() != 0) {
-                //s.setPosition(1080, s.getPosition().getY());
-                //spaceObjects.remove(s);
                 this.group.getChildren().remove(s);
             }
             s.step();
         }
         this.score++;
-        System.out.println(this.score);
-        if (isHit()) {
-            System.out.println("Ouchie");
-        }
+        if (isHit()) //Checks if the game has ended. Later versions might include lives, so this statement would be extended.
+            isOver = true;
     }
 
     /**
-     * Adds a spaceJunk object at the specified location
+     * Adds a spaceJunk object at the specified location.
      * @param x the x location for the spaceJunk
      * @param y the y location for the spaceJunk
      */
@@ -96,7 +81,7 @@ public class GameModel {
 
 
     /**
-     * Gets the score of the game
+     * Getter for the score of the game.
      * @return the current score of the game
      */
     public int getScore() {
@@ -104,27 +89,23 @@ public class GameModel {
     }
 
     /**
-     * Gets the spaceObjects stored in the model (for testing purposes)
-     * @return the spaceObjects arraylist associated with this instance of GameModel
-     */
-    public ArrayList<SpaceObject> getSpaceObjects() {
-        return this.spaceObjects;
-    }
-
-    /**
-     *
+     * Getter for the avatar of the game. Useful for keyEvents.
      * @return the avatar to get its position.
      */
     public Blob getAvatar() {
         return this.avatar;
     }
 
+    /**
+     * Setter for the AnchorPane that the model will use to put views in.
+     * @param anchorPane the anchorPane that the scene has.
+     */
     public void setPane(AnchorPane anchorPane) {
         this.anchorPane = anchorPane;
     }
 
     /**
-     * Tells the controller (or a test) whether or not the game is over.
+     * Tells the controller whether or not the game is over.
      * @return isOver, a boolean variable.
      */
     public boolean isOver() {
@@ -132,7 +113,7 @@ public class GameModel {
     }
 
     /**
-     * Method to check if the user has lost!
+     * Method to check if the user has lost by hitting a spaceJunk.
      * @return true if the avatar has hit a spaceJunk, false if not
      */
     public boolean isHit() {
@@ -140,35 +121,38 @@ public class GameModel {
         Double avatarPositionY = this.avatar.getPosition().getY();
         Double avatarWidth = this.avatar.getSize().getX();
         Double avatarHeight = this.avatar.getSize().getY();
+
         for (SpaceObject spaceJunk : this.spaceObjects) {
+
             Double spaceJunkPositionX = spaceJunk.getPosition().getX();
             Double spaceJunkPositionY = spaceJunk.getPosition().getY();
             Double spaceJunkWidth = spaceJunk.getSize().getX();
             Double spaceJunkHeight = spaceJunk.getSize().getY();
+
             //if top left corner of blob is within the rectangle:
-            isOver = true;
             if (avatarPositionX > spaceJunkPositionX && avatarPositionX < spaceJunkPositionX + spaceJunkWidth
                 && avatarPositionY + 16 > spaceJunkPositionY && avatarPositionY + 16 < spaceJunkPositionY + spaceJunkHeight)
                 return true;
-            //if top right corner of the blob conflicting:
+            //if top right corner of the blob conflicts:
             else if (avatarPositionX + avatarWidth > spaceJunkPositionX && avatarPositionX + avatarWidth < spaceJunkPositionX + spaceJunkWidth
                     && avatarPositionY > spaceJunkPositionY && avatarPositionY < spaceJunkPositionY + spaceJunkHeight)
                 return true;
-                //if bottom left corner of the blob conflicting:
+                //if bottom left corner of the blob conflicts:
             else if (avatarPositionX > spaceJunkPositionX && avatarPositionX < spaceJunkPositionX + spaceJunkWidth
                     && avatarPositionY + avatarHeight > spaceJunkPositionY && avatarPositionY + avatarHeight < spaceJunkPositionY + spaceJunkHeight)
                 return true;
-                //if bottom right corner of the blob conflicting:
+                //if bottom right corner of the blob conflicts:
             else if (avatarPositionX + avatarWidth > spaceJunkPositionX && avatarPositionX + avatarWidth < spaceJunkPositionX + spaceJunkWidth
                     && avatarPositionY + avatarHeight > spaceJunkPositionY && avatarPositionY + avatarHeight < spaceJunkPositionY + spaceJunkHeight)
                 return true;
         }
-        isOver = false;
         return false;
     }
 
     /**
-     * Builds a bunch of boring walls...
+     * Gets the initial frame of the game. This instantiates the avatar and
+     * a bunch of boring walls, as well as the background ("Space: the
+     * final frontier.")
      */
     public void getInitialWallsAndAvatar() {
         SpaceJunk background = new SpaceJunk();
@@ -176,10 +160,13 @@ public class GameModel {
         background.setSize(1000,800);
         background.setColor(Color.BLACK);
         this.group.getChildren().add(background);
+
         this.avatar = new Blob();
         this.avatar.setPosition(30, 350);
         this.avatar.setVelocity(0,0);
         this.group.getChildren().add(this.avatar);
+
+        //A bunch of boring walls just on top and bottom of the screen.
         for (int i = 0; i < 72; i++) {
             SpaceJunk junk = new SpaceJunk();
             junk.setPosition(i * 30 / 2 - (i % 2) * 15, (i % 2) * 780);
@@ -190,17 +177,21 @@ public class GameModel {
     }
 
     /**
-     * Adds onto the walls that were already built, in a more interesting way
+     * Adds onto the boring walls that were already built, in a more interesting way.
+     * The composition of the walls is governed by a sine function,
+     * and the gap between the top and bottom walls gets increasingly smaller,
+     * to a point.
      */
     public void getNextWallSection() {
-        //int nextTopHeight = this.randomNumberGenerator.nextInt(3);
         double nextSinHeight = Math.sin(this.score) * (this.score % 1500 / 100) + (this.score % 1500 / 100);
+
         for (int i = 0; i < nextSinHeight; i++) {
             SpaceJunk junk = new SpaceJunk();
             junk.setPosition(1075, i*20);
             this.spaceObjects.add(junk);
             this.group.getChildren().add(junk);
         }
+
         for (int i = 0; i < 38 - nextSinHeight - (25 - this.score % 1000 / 100); i++) {
             SpaceJunk junk = new SpaceJunk();
             junk.setPosition(1075, 800 - i * 20);
