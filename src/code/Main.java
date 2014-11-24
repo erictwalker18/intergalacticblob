@@ -53,10 +53,14 @@ public class Main extends Application {
         root.setOnKeyPressed(gameController);
 
         Scene scene = new Scene(root, 1000, 800);
+        Scene highScoresScene = new Scene(scoresRoot, 1000, 800);
         primaryStage.setTitle("The Intergalactic Adventure of Blob");
 
-        primaryStage.setScene(scene);
+        //primaryStage.setScene(scene);
+        primaryStage.setScene(highScoresScene);
         primaryStage.show();
+
+        root.requestFocus();
     }
     /**
      * Essentially the main method for the view. Launches the view and makes

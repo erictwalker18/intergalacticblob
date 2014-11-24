@@ -1,6 +1,7 @@
 package code;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Point2D;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
@@ -54,12 +55,25 @@ public class HighScoreView extends Group {
         this.backgroundColor = backgroundColor;
     }
 
+    public Point2D getPosition() {
+        return new Point2D(this.getLayoutX(), this.getLayoutY());
+    }
+
+    public void setPosition(double x, double y) {
+        this.setLayoutX(x);
+        this.setLayoutY(y);
+    }
+
     public void update() {
         Label label;
 
         this.getChildren().clear();
 
-        label = new Label(this.scoresModel.getHighScoreAt(this.scoreIndex).toString());
+        label = new Label(this.scoresModel.get(this.scoreIndex).getDate());
+        label.setStyle("-fx-border-color: red; -fx-background-color:white;");
+        this.getChildren().add(label);
+
+        label = new Label(Integer.toString(this.scoresModel.get(this.scoreIndex).getScore()));
         this.getChildren().add(label);
     }
 }

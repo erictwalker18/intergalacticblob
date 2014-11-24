@@ -39,6 +39,7 @@ public class HighScoresModel implements Serializable {
                 this.highScores.add(indexToAdd, highScoreToAdd);
                 return;
             }
+            indexToAdd++;
         }
         highScores.add(highScoreToAdd);
     }
@@ -65,5 +66,9 @@ public class HighScoresModel implements Serializable {
 
     public String getHighScoreAt(int index) {
         return this.highScores.get(index).toString();
+    }
+
+    public HighScore get(int index) {
+        return this.highScores.get(index);
     }
 }

@@ -17,11 +17,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 
 import java.io.*;
 import java.util.Timer;
@@ -89,22 +91,66 @@ public class Controller implements EventHandler<KeyEvent> {
         }
     }
 
+    public void showStartButton() {
+        Button startButton = new Button("Start");
+        startButton.setFocusTraversable(true);
+        startButton.setFont(new Font(80.0));
+        startButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+                onStartButton();
+                e.consume();
+            }
+        });
+        this.anchorPane.getChildren().add(startButton);
+        this.anchorPane.setTopAnchor(startButton, 300.0);
+        this.anchorPane.setLeftAnchor(startButton, 350.0);
+    }
+
     /**
      * What happens when the user selects the start button!
      */
     public void onStartButton() {
         if (!hasStarted) {
             setUpAnimationTimer();
-            this.anchorPane.getChildren().get(0).setOpacity(0.0);
+            //this.anchorPane.getChildren().get(0).setOpacity(0.0);
+            this.anchorPane.getChildren().clear();
             this.gameModel.setPane(this.anchorPane);
             this.gameModel.getBoringWalls();
+            Button pauseButton = new Button("Pause");
+            pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    onPauseButton();
+                }
+            });
+            this.anchorPane.getChildren().add(pauseButton);
             hasStarted = true;
         }
     }
 
+    public void onPauseButton() {
+        if (this.paused) {
+            this.setUpAnimationTimer();
+        } else {
+            this.timer.cancel();
+        }
+        this.paused = !this.paused;
+    }
+
+    public void onHighScoresButton() {
+
+    }
+
     @Override
     public void handle(KeyEvent event) {
-        System.out.println(event.getCharacter());
+        if (event.getCode() == KeyCode.P) {
+            onPauseButton();
+            event.consume();
+            return;
+        }
+        if (paused) //we don't want any surprises after the pause!
+            return;
         Blob avatar= this.gameModel.getAvatar();
         if (event.getCode().isWhitespaceKey()) {
             this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX(),
@@ -114,20 +160,13 @@ public class Controller implements EventHandler<KeyEvent> {
         else if (event.getCode() == KeyCode.D) {
             this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()+1,
                     this.gameModel.getAvatar().getVelocity().getY());
+            event.consume();
         }
         else if (event.getCode() == KeyCode.A) {
             this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()-1,
                     this.gameModel.getAvatar().getVelocity().getY());
+            event.consume();
         }
-    }
-
-    public void onPauseButton(ActionEvent actionEvent) {
-        if (this.paused) {
-            this.setUpAnimationTimer();
-        } else {
-            this.timer.cancel();
-        }
-        this.paused = !this.paused;
     }
 
     public void updateAnimation() {
@@ -143,6 +182,7 @@ public class Controller implements EventHandler<KeyEvent> {
             }
             this.scoresModel.addHighScore(this.gameModel.getScore(), "Eric", "11-23-2014");
             System.out.println(this.scoresModel.getHighScores(1));
+            resetToStart();
         }
     }
 
@@ -160,9 +200,17 @@ public class Controller implements EventHandler<KeyEvent> {
             }
         };
 
-        final long startTimeInMilliseconds = 0;
+        final long startTimeInMilliseconds = 500;
         long frameTimeInMilliseconds = (long)(1000.0 / FRAMES_PER_SECOND);
         this.timer = new java.util.Timer();
         this.timer.schedule(timerTask, startTimeInMilliseconds, frameTimeInMilliseconds);
+    }
+
+    public void resetToStart() {
+        this.anchorPane.getChildren().clear();
+        showStartButton();
+        this.gameModel = new GameModel();
+        this.frameNumber = 0;
+        this.hasStarted = false;
     }
 }

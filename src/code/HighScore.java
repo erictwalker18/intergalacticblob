@@ -54,4 +54,16 @@ public class HighScore implements Comparable<HighScore> {
     public String toString() {
         return Integer.toString(this.score) + "\t" + user + "\t" + date;
     }
+
+    public int getScore() {
+        return this.score;
+    }
+
+    public String getUser() {
+        return this.user;
+    }
+
+    public String getDate() {
+        return this.date;
+    }
 }
