@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class HighScoresModel implements Serializable {
     //Instance Variables
     private ArrayList<HighScore> highScores;
-    final private HighScore DEFAULT_SCORE = new HighScore(0, "Your Name Here", "Someday");
 
     /**
      * Default constructor

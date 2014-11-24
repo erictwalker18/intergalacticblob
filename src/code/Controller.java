@@ -20,12 +20,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.Timer;
@@ -101,6 +106,16 @@ public class Controller implements EventHandler<KeyEvent> {
     }
 
     public void showStartButton() {
+        /*
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("game.FXML"));
+        try {
+            Parent root = loader.load();
+            root.setOnKeyPressed(this);
+            this.anchorPane.getScene().setRoot(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        */
         this.startButton = new Button("Start");
         this.startButton.setFocusTraversable(true);
         this.startButton.setFont(new Font(80.0));
@@ -176,6 +191,11 @@ public class Controller implements EventHandler<KeyEvent> {
         highScoresButton.getScene().setRoot(root);
     }
 
+    public void onSubmitButton(String name, String date) {
+        this.scoresModel.addHighScore(this.gameModel.getScore(), name, date);
+        resetToStart();
+    }
+
     @Override
     public void handle(KeyEvent event) {
         if (event.getCode() == KeyCode.P) {
@@ -210,13 +230,43 @@ public class Controller implements EventHandler<KeyEvent> {
         }
         this.frameNumber = (this.frameNumber + 5) % 900;
         if (this.gameModel.isOver()) {
-            this.timer.cancel();
-            if (this.scoresModel == null) {
-                this.scoresModel = new HighScoresModel();
-            }
-            this.scoresModel.addHighScore(this.gameModel.getScore(), "Eric", "11-23-2014");
-            resetToStart();
+            lose();
         }
+    }
+
+    public void lose() {
+        this.timer.cancel();
+        if (this.scoresModel == null) {
+            this.scoresModel = new HighScoresModel();
+        }
+        Stage newStage = new Stage();
+        newStage.setTitle("High Score Entry");
+        final VBox comp = new VBox();
+        Text yourScore = new Text("Your Score: \n "+Integer.toString(this.gameModel.getScore()));
+        final TextField nameField= new TextField("Name");
+        final TextField dateField = new TextField("Date");
+        Button submitButton = new Button("Submit");
+        submitButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (nameField.getText() != null && dateField.getText() != null) {
+                    onSubmitButton(nameField.getText(), dateField.getText());
+                    ((Stage)nameField.getScene().getWindow()).close();
+                }
+                else {
+                    Text errorMessage = new Text("Please enter both a name and a date");
+                    comp.getChildren().add(errorMessage);
+                }
+            }
+        });
+        comp.getChildren().add(yourScore);
+        comp.getChildren().add(nameField);
+        comp.getChildren().add(dateField);
+        comp.getChildren().add(submitButton);
+
+        Scene stageScene = new Scene(comp, 300, 300);
+        newStage.setScene(stageScene);
+        newStage.show();
     }
 
     /**

@@ -36,22 +36,17 @@ public class Main extends Application {
         });
 
         FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("game.fxml"));
-        FXMLLoader scoresLoader = new FXMLLoader(getClass().getResource("highScores.fxml"));
 
-        Parent root = (Parent)gameLoader.load();
-        Parent scoresRoot = (Parent)scoresLoader.load();
+        Parent root = gameLoader.load();
 
         final Controller gameController = gameLoader.getController();
-        final HighScoreController scoresController = scoresLoader.getController();
 
         root.setOnKeyPressed(gameController);
 
         Scene scene = new Scene(root, 1000, 800);
-        Scene highScoresScene = new Scene(scoresRoot, 1000, 800);
         primaryStage.setTitle("The Intergalactic Adventure of Blob");
 
         primaryStage.setScene(scene);
-        //primaryStage.setScene(highScoresScene);
         primaryStage.show();
 
         root.requestFocus();
