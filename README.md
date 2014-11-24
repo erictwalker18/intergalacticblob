@@ -3,22 +3,10 @@ README.txt
 BlobStudios
 
 Eric Walker
-CS 257 Final Project Phase 2
+CS 257 Final Project Phase 3
 
 This project is an incredible adventure of a wayward blob, traveling through the dangers of intergalactic space. The Intergalactic Adventure of Blob is a helicopter-type game, that takes user input to keep the Blob away from the walls on the top and bottom of the screen.
 
-In this phase of the project, the classes for the model, view, and controller have been created. The model classes and all their subclasses have been created with method stubs, commented in javadoc, and junit tests were created. Only non-trivial methods of these classes have had tests created for them.
+In this phase of the project, the game as been fully created will careful attention to the MVC structure. The game view is a little messy as the views are objects in the model, but I discussed that with Jeff. The high scores view shows my understanding of the MVC architecture, with very clear distinction from model, view, and controller. 
 
-Classes included: (and tests)
-Blob.java
-BlobTest.java
-Controller.java
-GameModel.java
-GameModelTest.java
-GameView.java
-HighScore.java
-HighScoresModel.java
-HighScoresModelTest.java
-SpaceJunk.java
-SpaceObject.java
-SpaceObjectTest.java
+Everything is functional on a basic functionality. However, there are still a few things that I have not yet dealt with or implemented. Notably, the serialization of high scores could not be implemented for saving high scores between running the game. However, scores do still save in the instance. Also, the design of the game is at a lower level than I expected, again due to time constraints, however I plan to work on this for fun over break :). Finally, there are a few bugs, including letting the player resume play after they hit a wall if they hit the X on the name submission window then pause and unpause. Also, if one hits enter enough times, they just bounce up and down the screen in the boring walls section. Still thinking about solutions to these, but they shall be implemented later.
