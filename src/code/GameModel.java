@@ -1,8 +1,11 @@
 package code;
 
 import javafx.scene.Group;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+
 import java.util.ArrayList;
 
 /**
@@ -25,6 +28,7 @@ public class GameModel {
     private Group group;
     private ArrayList<SpaceObject> spaceObjects;
     private Blob avatar;
+    private Label scoreLabel;
     private int score;
     private boolean isOver;
 
@@ -37,6 +41,7 @@ public class GameModel {
         this.group = new Group();
         this.spaceObjects = new ArrayList<SpaceObject>();
         this.avatar = new Blob();
+        this.scoreLabel = new Label();
         this.score = 0;
         this.isOver = false;
     }
@@ -63,6 +68,7 @@ public class GameModel {
             s.step();
         }
         this.score++;
+        this.scoreLabel.setText("Score: "+this.score);
         if (isHit()) //Checks if the game has ended. Later versions might include lives, so this statement would be extended.
             isOver = true;
     }
@@ -152,9 +158,9 @@ public class GameModel {
     /**
      * Gets the initial frame of the game. This instantiates the avatar and
      * a bunch of boring walls, as well as the background ("Space: the
-     * final frontier.")
+     * final frontier"), and the score label (in the bottom right).
      */
-    public void getInitialWallsAndAvatar() {
+    public void initializeModel() {
         SpaceJunk background = new SpaceJunk();
         background.setVelocity(0,0);
         background.setSize(1000,800);
@@ -165,6 +171,11 @@ public class GameModel {
         this.avatar.setPosition(30, 350);
         this.avatar.setVelocity(0,0);
         this.group.getChildren().add(this.avatar);
+
+        this.scoreLabel.setText("Score: " + this.score);
+        this.scoreLabel.setLayoutY(30);
+        this.scoreLabel.setTextFill(Color.WHITE);
+        this.group.getChildren().add(this.scoreLabel);
 
         //A bunch of boring walls just on top and bottom of the screen.
         for (int i = 0; i < 72; i++) {

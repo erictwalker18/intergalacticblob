@@ -6,5 +6,5 @@
             fx:controller="code.HighScoresController"
             xmlns:fx="http://javafx.com/fxml">
     <Button fx:id="MainMenuButton" text="Main Menu" onAction="#onMainMenuButton"
-            AnchorPane.leftAnchor="50"/>
+            AnchorPane.leftAnchor="50" AnchorPane.topAnchor="30"/>
 </AnchorPane>

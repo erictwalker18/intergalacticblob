@@ -87,110 +87,6 @@ public class GameController implements EventHandler<KeyEvent> {
         }
     }
 
-    /*
-        Methods for various buttons are below:
-        (Comment here to break up the code and make it more readable)
-     */
-
-    /**
-     * Start button method. This sets up the animation timer, clears the AnchorPane,
-     * then fills it back up with the Blob in intergalactic space and a pause button.
-     */
-    public void onStartButton() {
-        setUpAnimationTimer();
-
-        this.anchorPane.getChildren().clear();
-
-        this.gameModel.setPane(this.anchorPane);
-        this.gameModel.getInitialWallsAndAvatar();
-
-        this.pauseButton = new Button("Pause");
-        pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                onPauseButton();
-            }
-        });
-        this.anchorPane.getChildren().add(pauseButton);
-    }
-
-    /**
-     * High scores button method. Switches to the high scores view, passing the
-     * high scores controller the high scores model.
-     * @throws IOException
-     */
-    public void onHighScoresButton() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
-        Parent root = loader.load();
-        HighScoresController highScoresController = loader.getController();
-        if (this.scoresModel == null)
-            this.scoresModel = new HighScoresModel();
-        highScoresController.initialize(this.scoresModel);
-        highScoresButton.getScene().setRoot(root);
-    }
-
-    /**
-     * Pause button method. Pauses the game if it is not paused, otherwise resumes play.
-     * Also called when the player presses 'p'
-     */
-    public void onPauseButton() {
-        if (this.paused) {
-            this.setUpAnimationTimer();
-            this.pauseButton.setText("Pause");
-        } else {
-            this.timer.cancel();
-            this.pauseButton.setText("Resume");
-        }
-        this.paused = !this.paused;
-    }
-
-    /**
-     * Submit button method. This takes in the name and date the user provided,
-     * and stores a new high score in the scores model. It also resets the game
-     * back to the main menu.
-     * @param name the name of the high scorer
-     * @param date the date the high score was achieved
-     */
-    public void onSubmitButton(String name, String date) {
-        this.scoresModel.addHighScore(this.gameModel.getScore(), name, date);
-        resetToStart();
-    }
-
-    /**
-     * KeyEvent handler. Used for keyboard input in controlling the glorious
-     * Blob in his intergalactic adventure. This takes in enter, tab, a, d, and p.
-     * See the instructions on the game.fxml file to see what each does.
-     * @param event the key event
-     */
-    @Override
-    public void handle(KeyEvent event) {
-        if (event.getCode() == KeyCode.P) {
-            onPauseButton();
-            event.consume();
-            return;
-        }
-        if (paused) //we don't want any surprises after the pause!
-            return;
-
-        Blob avatar= this.gameModel.getAvatar();
-
-        if (event.getCode().isWhitespaceKey()) { //enter or tab. Oddly, space does not work with this. Will continue to look into why.
-            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX(),
-                    this.gameModel.getAvatar().getVelocity().getY()-15);
-            event.consume();
-        }
-        else if (event.getCode() == KeyCode.D) {
-            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()+1,
-                    this.gameModel.getAvatar().getVelocity().getY());
-            event.consume();
-        }
-        else if (event.getCode() == KeyCode.A) {
-            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()-1,
-                    this.gameModel.getAvatar().getVelocity().getY());
-            event.consume();
-        }
-    }
-
     /**
      * Update method. updates the model, the frame number, gets a new wall section if it is time,
      * and checks if the game is over, calling the lose method if it is.
@@ -281,6 +177,110 @@ public class GameController implements EventHandler<KeyEvent> {
         showMainMenu();
         this.gameModel = new GameModel();
         this.frameNumber = 0;
+    }
+
+    /*
+        Methods for various buttons are below:
+        (Comment here to break up the code and make it more readable)
+     */
+
+    /**
+     * Start button method. This sets up the animation timer, clears the AnchorPane,
+     * then fills it back up with the Blob in intergalactic space and a pause button.
+     */
+    public void onStartButton() {
+        setUpAnimationTimer();
+
+        this.anchorPane.getChildren().clear();
+
+        this.gameModel.setPane(this.anchorPane);
+        this.gameModel.initializeModel();
+
+        this.pauseButton = new Button("Pause");
+        pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                onPauseButton();
+            }
+        });
+        this.anchorPane.getChildren().add(pauseButton);
+    }
+
+    /**
+     * High scores button method. Switches to the high scores view, passing the
+     * high scores controller the high scores model.
+     * @throws IOException
+     */
+    public void onHighScoresButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
+        Parent root = loader.load();
+        HighScoresController highScoresController = loader.getController();
+        if (this.scoresModel == null)
+            this.scoresModel = new HighScoresModel();
+        highScoresController.initialize(this.scoresModel);
+        highScoresButton.getScene().setRoot(root);
+    }
+
+    /**
+     * Pause button method. Pauses the game if it is not paused, otherwise resumes play.
+     * Also called when the player presses 'p'
+     */
+    public void onPauseButton() {
+        if (this.paused) {
+            this.setUpAnimationTimer();
+            this.pauseButton.setText("Pause");
+        } else {
+            this.timer.cancel();
+            this.pauseButton.setText("Resume");
+        }
+        this.paused = !this.paused;
+    }
+
+    /**
+     * Submit button method. This takes in the name and date the user provided,
+     * and stores a new high score in the scores model. It also resets the game
+     * back to the main menu.
+     * @param name the name of the high scorer
+     * @param date the date the high score was achieved
+     */
+    public void onSubmitButton(String name, String date) {
+        this.scoresModel.addHighScore(this.gameModel.getScore(), name, date);
+        resetToStart();
+    }
+
+    /**
+     * KeyEvent handler. Used for keyboard input in controlling the glorious
+     * Blob in his intergalactic adventure. This takes in enter, tab, a, d, and p.
+     * See the instructions on the game.fxml file to see what each does.
+     * @param event the key event
+     */
+    @Override
+    public void handle(KeyEvent event) {
+        if (event.getCode() == KeyCode.P) {
+            onPauseButton();
+            event.consume();
+            return;
+        }
+        if (paused) //we don't want any surprises after the pause!
+            return;
+
+        Blob avatar= this.gameModel.getAvatar();
+
+        if (event.getCode().isWhitespaceKey()) { //enter or tab. Oddly, space does not work with this. Will continue to look into why.
+            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX(),
+                    this.gameModel.getAvatar().getVelocity().getY()-15);
+            event.consume();
+        }
+        else if (event.getCode() == KeyCode.D) {
+            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()+1,
+                    this.gameModel.getAvatar().getVelocity().getY());
+            event.consume();
+        }
+        else if (event.getCode() == KeyCode.A) {
+            this.gameModel.getAvatar().setVelocity(this.gameModel.getAvatar().getVelocity().getX()-1,
+                    this.gameModel.getAvatar().getVelocity().getY());
+            event.consume();
+        }
     }
 
     //Below are methods that have been implemented, but not incorporated into the project,
