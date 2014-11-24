@@ -11,14 +11,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
-import java.util.Timer;
-import java.util.TimerTask;
-import javafx.geometry.Point2D;
 
 /**
  * Main class that starts everything up.
@@ -41,7 +35,7 @@ public class Main extends Application {
             }
         });
 
-        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("intergalactic.fxml"));
+        FXMLLoader gameLoader = new FXMLLoader(getClass().getResource("game.fxml"));
         FXMLLoader scoresLoader = new FXMLLoader(getClass().getResource("highScores.fxml"));
 
         Parent root = (Parent)gameLoader.load();

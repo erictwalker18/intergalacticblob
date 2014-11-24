@@ -2,11 +2,10 @@ package code;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  * BlobStudios
@@ -23,18 +22,22 @@ public class HighScoreController {
     public HighScoreController() {
     }
 
-    public void onHelloButton() {
-        scoresModel.addHighScore(-1301, "Eric", "testing day");
-        scoresModel.addHighScore(9001, "Jeff", "finish day");
+    public void onMainMenuButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
+        Parent root = loader.load();
+        root.setFocusTraversable(true);
+        Controller controller = loader.getController();
+        controller.setScoresModel(this.scoresModel);
+        root.setOnKeyPressed(controller);
+        this.anchorPane.getChildren().get(0).getScene().setRoot(root);
+    }
+
+    public void initialize(HighScoresModel scoresModel) {
+        this.scoresModel = scoresModel;
         HighScoreView scoreView = new HighScoreView();
         scoreView.setScoresModel(scoresModel);
         scoreView.update();
-        System.out.println(scoresModel.get(0).toString());
         anchorPane.getChildren().add(scoreView);
         anchorPane.setTopAnchor(scoreView, 100.0);
-    }
-
-    public void setHighScoresModel(HighScoresModel scoresModel) {
-        this.scoresModel = scoresModel;
     }
 }

@@ -170,7 +170,7 @@ public class GameModel {
     /**
      * Builds a bunch of boring walls...
      */
-    public void getBoringWalls() {
+    public void getInitialWallsAndAvatar() {
         SpaceJunk background = new SpaceJunk();
         background.setVelocity(0,0);
         background.setSize(1000,800);

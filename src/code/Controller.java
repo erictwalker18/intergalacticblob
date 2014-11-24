@@ -96,6 +96,10 @@ public class Controller implements EventHandler<KeyEvent> {
         }
     }
 
+    public void setScoresModel(HighScoresModel scoresModel) {
+        this.scoresModel = scoresModel;
+    }
+
     public void showStartButton() {
         this.startButton = new Button("Start");
         this.startButton.setFocusTraversable(true);
@@ -136,10 +140,9 @@ public class Controller implements EventHandler<KeyEvent> {
     public void onStartButton() {
         if (!hasStarted) {
             setUpAnimationTimer();
-            //this.anchorPane.getChildren().get(0).setOpacity(0.0);
             this.anchorPane.getChildren().clear();
             this.gameModel.setPane(this.anchorPane);
-            this.gameModel.getBoringWalls();
+            this.gameModel.getInitialWallsAndAvatar();
             this.pauseButton = new Button("Pause");
             pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
@@ -167,7 +170,7 @@ public class Controller implements EventHandler<KeyEvent> {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
         Parent root = loader.load();
         HighScoreController highScoreController = loader.getController();
-        highScoreController.setHighScoresModel(this.scoresModel);
+        highScoreController.initialize(this.scoresModel);
         highScoresButton.getScene().setRoot(root);
     }
 
