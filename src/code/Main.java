@@ -56,8 +56,8 @@ public class Main extends Application {
         Scene highScoresScene = new Scene(scoresRoot, 1000, 800);
         primaryStage.setTitle("The Intergalactic Adventure of Blob");
 
-        //primaryStage.setScene(scene);
-        primaryStage.setScene(highScoresScene);
+        primaryStage.setScene(scene);
+        //primaryStage.setScene(highScoresScene);
         primaryStage.show();
 
         root.requestFocus();

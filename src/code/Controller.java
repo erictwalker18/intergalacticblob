@@ -16,8 +16,10 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -39,7 +41,9 @@ public class Controller implements EventHandler<KeyEvent> {
     private boolean paused;
     private Timer timer;
     private int frameNumber;
-    private Button pauseButton;
+    public Button pauseButton;
+    public Button startButton;
+    public Button highScoresButton;
 
     private boolean hasStarted = false;
 
@@ -93,19 +97,37 @@ public class Controller implements EventHandler<KeyEvent> {
     }
 
     public void showStartButton() {
-        Button startButton = new Button("Start");
-        startButton.setFocusTraversable(true);
-        startButton.setFont(new Font(80.0));
-        startButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+        this.startButton = new Button("Start");
+        this.startButton.setFocusTraversable(true);
+        this.startButton.setFont(new Font(80.0));
+        this.startButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent e) {
                 onStartButton();
                 e.consume();
             }
         });
-        this.anchorPane.getChildren().add(startButton);
-        this.anchorPane.setTopAnchor(startButton, 300.0);
-        this.anchorPane.setLeftAnchor(startButton, 350.0);
+        this.anchorPane.getChildren().add(this.startButton);
+        this.anchorPane.setTopAnchor(this.startButton, 300.0);
+        this.anchorPane.setLeftAnchor(this.startButton, 350.0);
+
+        this.highScoresButton = new Button("High Scores");
+        this.highScoresButton.setFocusTraversable(true);
+        this.highScoresButton.setFont(new Font(60.0));
+        this.highScoresButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent e) {
+                try {
+                    onHighScoresButton();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                e.consume();
+            }
+        });
+        this.anchorPane.getChildren().add(this.highScoresButton);
+        this.anchorPane.setTopAnchor(this.highScoresButton, 500.0);
+        this.anchorPane.setLeftAnchor(this.highScoresButton, 300.0);
     }
 
     /**
@@ -141,8 +163,12 @@ public class Controller implements EventHandler<KeyEvent> {
         this.paused = !this.paused;
     }
 
-    public void onHighScoresButton() {
-
+    public void onHighScoresButton() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("highScores.fxml"));
+        Parent root = loader.load();
+        HighScoreController highScoreController = loader.getController();
+        highScoreController.setHighScoresModel(this.scoresModel);
+        highScoresButton.getScene().setRoot(root);
     }
 
     @Override

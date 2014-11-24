@@ -5,6 +5,9 @@ package code; /**
  * Created on 11/14/2014.
  */
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -74,5 +77,9 @@ public class HighScoresModel implements Serializable {
 
     public ArrayList<HighScore> getScoreList() {
         return this.highScores;
+    }
+
+    public ObservableList<HighScore> getObservableList() {
+        return FXCollections.observableArrayList(this.highScores);
     }
 }

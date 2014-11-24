@@ -12,10 +12,4 @@
             <Font size="80.0"/>
         </font>
     </Button>
-    <Button fx:id="highScoresButton" text="High Scores" AnchorPane.topAnchor="500" AnchorPane.leftAnchor="300"
-            textFill="black" onAction="#onStartButton">
-        <font>
-            <Font size="60.0"/>
-        </font>
-    </Button>
 </AnchorPane>

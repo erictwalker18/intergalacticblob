@@ -7,6 +7,7 @@ import javafx.scene.control.Cell;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 
 /**
@@ -73,10 +74,19 @@ public class HighScoreView extends Group {
         String styleString = "-fx-border-color: green; -fx-background-color: white;" +
                 "-fx-padding: 5";
         TableColumn scoreColumn = new TableColumn("Score");
+        scoreColumn.setMinWidth(100);
+        scoreColumn.setCellValueFactory(
+                new PropertyValueFactory<HighScore, Integer>("score"));
         TableColumn userColumn = new TableColumn("User");
+        userColumn.setMinWidth(100);
+        userColumn.setCellValueFactory(
+                new PropertyValueFactory<HighScore, String>("user"));
         TableColumn dateColumn = new TableColumn("Date");
+        dateColumn.setMinWidth(100);
+        dateColumn.setCellValueFactory(
+                new PropertyValueFactory<HighScore, String>("date"));
 
-        //this.tableView.setItems(this.scoresModel.getScoreList());
+        this.tableView.setItems(this.scoresModel.getObservableList());
 
         tableView.getColumns().addAll(scoreColumn, userColumn, dateColumn);
 

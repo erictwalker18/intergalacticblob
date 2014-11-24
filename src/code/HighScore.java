@@ -5,6 +5,9 @@ package code; /**
  * Created on 11/14/2014.
  */
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  * HighScore.java
  *
@@ -25,15 +28,6 @@ public class HighScore implements Comparable<HighScore> {
     private int score;
     private String user;
     private String date;
-
-    /**
-     * Default constructor.
-     */
-    public HighScore() {
-        this.score = 0;
-        this.user = "No name entered";
-        this.date = "A year ago...";
-    }
 
     /**
      * Useful constructor to make a high score.
