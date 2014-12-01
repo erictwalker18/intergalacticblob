@@ -19,6 +19,7 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -28,8 +29,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.*;
 import java.util.Timer;
@@ -45,6 +48,7 @@ public class GameController implements EventHandler<KeyEvent> {
     private Timer timer;
     private boolean paused;
     private int frameNumber;
+    private Group group;
 
     //Buttons that are included in the gameView. These are held in the controller
     //instead of the FXML file as they need to be recreated or referenced elsewhere.
@@ -59,8 +63,10 @@ public class GameController implements EventHandler<KeyEvent> {
      */
     public GameController() {
         this.gameModel = new GameModel();
+        this.group = new Group();
         this.paused = false;
         this.frameNumber = 0;
+        loadHighScores();
     }
 
     /**
@@ -88,17 +94,82 @@ public class GameController implements EventHandler<KeyEvent> {
     }
 
     /**
+     * Gets the initial frame of the game. This instantiates the avatar and
+     * a bunch of boring walls, as well as the background ("Space: the
+     * final frontier"), and the score label (in the bottom right).
+     */
+    public void initializeModel() {
+        SpaceJunk background = new SpaceJunk();
+        background.setVelocity(0,0);
+        background.setSize(1000,800);
+        background.setColor(Color.BLACK);
+        this.group.getChildren().add(background);
+
+        this.gameModel.setAvatar(30, 350, 0, 0);
+        this.group.getChildren().add(this.gameModel.getAvatar());
+
+        this.gameModel.setScore(0);
+        this.gameModel.setScoreLabel(this.gameModel.getScore());
+        this.group.getChildren().add(this.gameModel.getScoreLabel());
+
+        //A bunch of boring walls just on top and bottom of the screen.
+        for (int i = 0; i < 72; i++) {
+            this.group.getChildren().add(this.gameModel.addSpaceJunk(i * 30 / 2 - (i % 2) * 15, (i % 2) * 780));
+        }
+        this.anchorPane.getChildren().add(this.group);
+    }
+
+    /**
      * Update method. updates the model, the frame number, gets a new wall section if it is time,
      * and checks if the game is over, calling the lose method if it is.
      */
     public void updateAnimation() {
         this.gameModel.step();
-        if (this.frameNumber % 6 == 0 && this.frameNumber < 905) {
-            this.gameModel.getNextWallSection();
+        if (this.frameNumber % 6 == 0) {
+            getNextWallSection();
         }
-        this.frameNumber = (this.frameNumber + 5) % 900;
+        this.frameNumber++;
+        this.gameModel.setScoreLabel(this.gameModel.getScore());
+        this.gameModel.getAvatar().toFront();
         if (this.gameModel.isOver()) {
             lose();
+        }
+
+        //Garbage collection every 1000 steps
+        if (this.gameModel.getScore() % 1000 == 0) {
+            int i = 0;
+            boolean isGarbage = false;
+            SpaceJunk junkToDelete = null;
+            while (i < this.gameModel.getSpaceJunks().size()) {
+                if (this.gameModel.getSpaceJunks().get(i).getPosition().getX() < 0) {
+                    isGarbage = true;
+                    junkToDelete = this.gameModel.getSpaceJunks().get(i);
+                }
+                if (isGarbage) {
+                    this.gameModel.getSpaceJunks().remove(junkToDelete);
+                    this.group.getChildren().remove(junkToDelete);
+                    isGarbage = false;
+                }
+                i++;
+            }
+        }
+    }
+
+    /**
+     * Adds onto the boring walls that were already built, in a more interesting way.
+     * The composition of the walls is governed by a sine function,
+     * and the gap between the top and bottom walls gets increasingly smaller,
+     * to a point.
+     */
+    public void getNextWallSection() {
+        double nextSinHeight = Math.sin(this.gameModel.getScore()) * (this.gameModel.getScore() % 1000 / 100) + (this.gameModel.getScore() % 1000 / 100);
+
+        for (int i = 0; i < nextSinHeight; i++) {
+            this.group.getChildren().add(this.gameModel.addSpaceJunk(1075, i*20));
+        }
+
+        for (int i = 0; i < 38 - nextSinHeight - (36 - this.gameModel.getScore() / 500 - this.gameModel.getScore() % 1000 / 50); i++) {
+            this.group.getChildren().add(this.gameModel.addSpaceJunk(1075, 800 - i * 20));
         }
     }
 
@@ -115,8 +186,11 @@ public class GameController implements EventHandler<KeyEvent> {
 
         //User input section for name and date
         Stage newStage = new Stage();
+        newStage.initStyle(StageStyle.UNDECORATED);
+
         newStage.setTitle("High Score Entry");
         final VBox comp = new VBox();
+        comp.setSpacing(10.0);
         Text yourScore = new Text("Your Score: \n "+Integer.toString(this.gameModel.getScore()));
         final TextField nameField= new TextField("Name");
         final TextField dateField = new TextField("Date");
@@ -193,8 +267,7 @@ public class GameController implements EventHandler<KeyEvent> {
 
         this.anchorPane.getChildren().clear();
 
-        this.gameModel.setPane(this.anchorPane);
-        this.gameModel.initializeModel();
+        initializeModel();
 
         this.pauseButton = new Button("Pause");
         pauseButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
@@ -249,6 +322,20 @@ public class GameController implements EventHandler<KeyEvent> {
     }
 
     /**
+     * Save button method. Should correctly serialize the high scores.
+     */
+    public void onSaveButton() {
+        saveHighScore();
+    }
+
+    /**
+     * Load button method. Should correctly load the high scores in the highScores.ser file
+     */
+    public void onLoadButton() {
+        loadHighScores();
+    }
+
+    /**
      * KeyEvent handler. Used for keyboard input in controlling the glorious
      * Blob in his intergalactic adventure. This takes in enter, tab, a, d, and p.
      * See the instructions on the game.fxml file to see what each does.
@@ -283,13 +370,7 @@ public class GameController implements EventHandler<KeyEvent> {
         }
     }
 
-    //Below are methods that have been implemented, but not incorporated into the project,
-    //due to time constraints. Hopefully winter break will allow serialization to be included
-    //so that scores may be remembered forever.
-
     /**
-     * NOT YET USED (Sadly, time constraints on implementation made this not viable for incorporating for phase_3))
-     *
      * Serialization method. Saves the current high score for later use.
      */
     public void saveHighScore() {
@@ -306,8 +387,6 @@ public class GameController implements EventHandler<KeyEvent> {
     }
 
     /**
-     * NOT YET USED (Sadly, time constraints on implementation made this not viable for incorporating for phase_3)
-     *
      * Deserialization method. Loads a list of high scores from the default file.
      */
     public void loadHighScores() {

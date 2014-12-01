@@ -30,9 +30,13 @@ public class Blob extends SpaceObject {
     public void step() {
         super.step();
         this.setVelocity(this.getVelocity().getX(), this.getVelocity().getY()+1); //Accounts for gravity
-        if (this.getLayoutY() > 720) //doesn't allow the Blob to fly off the top of the screen.
-            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY()+1);
-        else if (this.getLayoutY() < 0) //doesn't allow the Blob to fly off the bottom of the screen.
-            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY()+1);
+        if (this.getLayoutY() > 720) { //doesn't allow the Blob to fly off the bottom of the screen.
+            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY() + 1);
+            this.setPosition(this.getPosition().getX(), 720);
+        }
+        else if (this.getLayoutY() < 0) { //doesn't allow the Blob to fly off the top of the screen.
+            this.setVelocity(this.getVelocity().getX(), -this.getVelocity().getY() + 1);
+            this.setPosition(this.getPosition().getX(), 0);
+        }
     }
 }

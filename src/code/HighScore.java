@@ -7,6 +7,8 @@ package code;
  * Created on 11/14/2014.
  */
 
+import java.io.Serializable;
+
 /**
  * HighScore.java
  *
@@ -15,7 +17,7 @@ package code;
  * consists of a score, name, and date. Storing 3 items in a
  * dictionary is just annoying.
  */
-public class HighScore implements Comparable<HighScore> { //Implements comparable for use in sorting
+public class HighScore implements Comparable<HighScore>, Serializable { //Implements comparable for use in sorting
 
     //Instance Variables
     private int score;
